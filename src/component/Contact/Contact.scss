@@ -1,0 +1,279 @@
+.Contact {
+    position: relative;
+
+    // section 1
+    .section1 {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .contact_img_1 {
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        .text1, .text2 {
+            position: absolute;
+            font-weight: 800;
+            z-index: 30;
+        }
+
+        .text1 {
+            left: 6%;
+            top: 40%;
+            font-size: 4rem;
+            color: #3EB2F0;
+        }
+
+        .text2 {
+            right: 8%;
+            top: 40%;
+            font-size: 3rem;
+            font-weight: 750;
+        }
+    }
+
+    // section 2
+    .section2 {
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem;
+        background-color: #f9f9f9;
+        z-index: 10;
+
+        .left, .right {
+            width: 45%;
+        }
+
+        .left {
+            padding: 0% 14%;
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    .icon {
+                        margin-right: 0.5rem;
+                        color: #3EB2F0;
+                    }
+
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            form {
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+                .form-row {
+                    display: flex;
+                    flex-wrap: wrap;  // Ensure children wrap to the next line
+                    justify-content: space-between;
+                    margin-bottom: 1rem;
+
+                    .form-group {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 1rem;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        input, textarea {
+                            box-sizing: border-box;  // Ensure padding and border are included in the width
+                            width: 100%;  // Make input fields full width of the container
+                        }
+                    }
+                }
+
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+
+                    label {
+                        margin-bottom: 0.5rem;
+                        font-weight: 600;
+                    }
+
+                    input, textarea {
+                        padding: 0.5rem;
+                        font-size: 1rem;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        background-color: rgb(244, 242, 242);
+                    }
+
+                    textarea {
+                        resize: vertical;
+                    }
+
+                    button {
+                        padding: 0.75rem;
+                        font-size: 1rem;
+                        color: #fff;
+                        background-color: #3EB2F0;
+                        border: none;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        transition: background-color 0.3s;
+                        border-radius: 50px;
+
+                        &:hover {
+                            background-color: #3498db;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // responsiveness 
+    @media (max-width: 1280px) {
+        .section1 {
+            .text1, .text2 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .section1 {
+            .text1, .text2 {
+                font-size: 3rem;
+            }
+        }
+
+        .section2 {
+            .right {
+                form {
+                    .form-row {
+                        flex-direction: column;
+                        .form-group {
+                            width: 100%;
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .section2 {
+            flex-direction: column;
+
+            .left, .right {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+
+            .right {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 912px) {
+        .section1 {
+            .text1, .text2 {
+                font-size: 2.5rem;
+            }
+
+            .section2 {
+                padding: 2rem;
+
+                .left, .right {
+                    width: 100%;
+                }
+
+                .form-group {
+                    .first_name {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section1 {
+            .text1, .text2 {
+                font-size: 2.5rem;
+            }
+
+            .section2 {
+                flex-direction: column;
+                padding: 2rem;
+
+                .left, .right {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+
+                .right {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        .section1 {
+            .text1, .text2 {
+                font-size: 1.5rem;
+            }
+
+            .section2 {
+                flex-direction: column;
+                padding: 1rem;
+
+                .left, .right {
+                    width: 100%;
+                }
+
+                .right {
+                    margin-top: 1rem;
+
+                    form {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

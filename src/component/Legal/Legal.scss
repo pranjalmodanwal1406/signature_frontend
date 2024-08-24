@@ -1,0 +1,158 @@
+.Legal {
+    .legal_h2 {
+        margin-left: 7%;
+        margin-top: 6%;
+        font-weight: 700;
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+
+        .spray {
+            display: inline-block;
+            position: relative;
+
+            .splash-box {
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 35px;
+                border-radius: 120%;
+                background-color: rgb(43 179 255 / 43%);
+                box-shadow: -3px -3px 22px rgb(43 179 282);
+                z-index: 9;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .icon {
+                    color: #333;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .Legal_maincontent {
+        padding: 2% 4% 4% 4%;
+        margin-left: 6%;
+        max-width: 90%;
+    }
+
+    .Legal_h4 {
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    .Legal_para {
+        line-height: 1.5;
+    }
+
+    // Footer section
+    .Legal_footer {
+        background-color: black;
+        padding: 2rem 0;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .legal_Contact {
+            margin-left: 10%;
+        }
+
+        .list-unstyled li {
+            margin-bottom: 0.5rem;
+            color: grey;
+            font-weight: 400;
+            padding: 0.5%;
+        }
+
+        .icon {
+            margin-right: 5%;
+        }
+
+        .list-unstyled li a {
+            color: rgb(206, 203, 203);
+            font-weight: 400;
+        }
+    }
+
+    .Legal_last {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+    @media (max-width: 992px) and (min-width: 577px) {
+        .legal_h2 {
+            margin-left: 5%;
+            margin-top: 4%;
+            font-size: 1.5rem;
+
+            .spray {
+                .splash-box {
+                    height: 30px;
+
+                    .icon {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .Legal_maincontent {
+            padding: 2% 3% 3% 3%;
+            margin-left: 5%;
+            max-width: 95%;
+        }
+
+        .Legal_footer {
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+            .legal_Contact {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            .col-lg-3 {
+                flex: 1;
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .legal_h2 {
+            font-size: 1.2rem;
+
+            .spray {
+                .splash-box {
+                    height: 25px;
+
+                    .icon {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .Legal_maincontent {
+            padding: 2% 2% 2% 2%;
+            margin-left: 2%;
+            max-width: 98%;
+        }
+
+        .Legal_footer {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .legal_Contact {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+}

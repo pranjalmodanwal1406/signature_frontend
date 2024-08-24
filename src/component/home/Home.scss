@@ -1,0 +1,293 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+// body {
+//   font-family: 'Poppins', sans-serif;
+// }
+
+// .Home1 {
+//   padding-left: 7rem;
+//   height: 75vh;
+//   width: 45vw;
+//   margin-bottom: 20vh;
+// }
+
+// h3, span {
+//   color: #3EB2F0;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .Home1_content {
+//   width: 38vw;
+// }
+
+// .home_img_1 {
+//   margin-left: 10%;
+// }
+
+// .home-button {
+//   margin-top: 20px;
+//   background: #3EB2F0;
+//   color: white;
+//   border-radius: 15px;
+//   padding: 15px 30px;
+//   font-size: 1rem;
+// }
+
+// .view-pricing {
+//     margin-top: 20px;
+//     background: white;
+//     color: black;
+//     border-radius: 15px;
+//     padding: 15px 30px;
+//     font-size: 1rem;
+//   }
+
+// .home_img_1 img {
+//   height: 70vh;
+//   width: auto;
+// }
+
+// .section2 {
+//   display: flex;
+// }
+
+// .Home2 {
+//   display: flex;
+//   gap: 2rem;
+//   margin-left: 7vw;
+//   margin-bottom: 20vh;
+//   border-right: 1px solid #3EB2F0;
+
+//   .div1, .div2 {
+//     border-right: 2px solid #3EB2F0;
+//     width: 400px;
+//   }
+
+//   .section-box {
+//     text-align: center;
+//     padding: 1rem;
+//     width: 33%;
+//     margin: 0 auto;
+//   }
+
+//   h1 {
+//     margin-top: 0;
+//     color: #3EB2F0;
+//   }
+
+//   p {
+//     font-weight: 700;
+//     font-size: 1.5em;
+//     margin-top: 0.5rem;
+//   }
+// }
+
+// .Home3 {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   margin-bottom: 20vh;
+//   margin-top: 10vh;
+
+//   .Home3-content {
+//     width: 50%;
+//     margin-left: 10%;
+//   }
+
+//   p {
+//     font-size: 1.5em;
+//     width: 80%;
+//     margin: 1rem auto;
+//     margin-left: 1%;
+//   }
+
+//   .home-button2 {
+//     background: #3EB2F0;
+//     color: white;
+//     border-radius: 15px;
+//     font-size: 1rem;
+//     padding: 10px 20px;
+//     width: 50%;
+//     margin: 1rem auto;
+//   }
+
+//   .home_img_2 {
+//     width: 40%;
+//     margin-left: auto;
+//   }
+// }
+
+// .Home4 {
+//   padding-left: 7rem;
+//   height: 15vh;
+//   width: 45vw;
+//   flex-direction: column;
+
+//   .home4-head {
+//     width: 75vw;
+//     text-align: center;
+//     margin-left: 4vw;
+//   }
+
+//   h2 {
+//     font-size: 2.5em;
+//   }
+
+//   p {
+//     width: 55vw;
+//     text-align: center;
+//     margin-left: 12vw;
+//   }
+// }
+
+// .Home5 {
+//   display: flex;
+//   flex-direction: column;
+//   margin-bottom: 20vh;
+
+//   .home-button3 {
+//     margin-top: 20px;
+//     background: #3EB2F0;
+//     color: white;
+//     border-radius: 15px;
+//     padding: 15px 30px;
+//     font-size: 1rem;
+//     width: 10vw;
+//     margin-left: 600px;
+//   }
+// }
+
+// .Home6 {
+// //   text-align: center;
+//   margin-bottom: 20vh;
+//   margin-left: 10%;
+// //   margin-right: 10%;
+
+//   .h16 {
+//     font-size: 2rem;
+//   }
+
+//   .testimonial-carousel {
+//     .testimonial-slider {
+//       .slick-prev,
+//       .slick-next {
+//         color: #3EB2F0;
+//       }
+
+//       .testimonial-card {
+//         background: white;
+//         border-radius: 10px;
+//         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+//         padding: 1rem;
+//         width: 100px;
+//         // text-align: center;
+//         margin: 0 auto;
+
+//         .stars {
+//           color: #FFD700;
+//           font-size: 1.2rem;
+//         }
+
+//         p {
+//           font-size: 0.9rem;
+//           color: #666;
+//           margin: 1rem 0;
+//         }
+
+//         .testimonial-info {
+//           display: flex;
+//           margin-top: 1rem;
+
+//           img {
+//             border-radius: 50%;
+//             width: 60px;
+//             height: 60px;
+//           }
+
+//           h4 {
+//             margin-left: 1rem;
+//             color: #3EB2F0;
+//             font-size: 1rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // utility class
+// .flex {
+//   display: flex;
+// }
+
+// .mt-5 {
+//   margin-top: 5em;
+// }
+
+// .mt-0 {
+//   margin-top: 0em;
+// }
+
+// .pt-0 {
+//   padding-top: 0;
+// }
+
+// /* Responsive Styles */
+// @media (max-width: 1200px) {
+//   .Home1 {
+//     padding-left: 3rem;
+//     height: auto;
+//     width: 60vw;
+//   }
+
+//   .home_img_1 img {
+//     max-width: 100%;
+//     max-height: 100%;
+//   }
+
+//   p {
+//     width: 50vw;
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .Home1 {
+//     padding-left: 2rem;
+//     width: 70vw;
+//   }
+
+//   .home_img_1 img {
+//     height: 77vh;
+//     width: 45vw;
+//     margin-left: 10vh;
+//   }
+
+//   p {
+//     width: 60vw;
+//   }
+//   .Home2 {
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     margin-left: 80px;
+
+//     .div1, .div2, .div3 {
+//       width: 30%;
+//       border-right: 1px solid #3EB2F0;
+//     }
+//   }
+
+//   .home-button, .home-button2, .home-button3 {
+//     width: 100%;
+//     margin: 1rem auto;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .Home6 .testimonial-card {
+//     width: 80%;
+//   }
+// }
