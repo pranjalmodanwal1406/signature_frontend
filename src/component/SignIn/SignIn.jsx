@@ -31,7 +31,7 @@ function Signin() {
                     // Save the token to local storage or context
                     localStorage.setItem('token', data.token);
                     // Redirect to the desired page on a different port
-                    window.location.replace('http://13.200.240.28:6006');
+                    window.location.replace('http://44.196.192.232:3008');
                 } else {
                     setErrorMessage(data.message || 'Login failed. Please check your credentials.');
                 }
