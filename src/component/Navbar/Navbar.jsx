@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
+import signature_logo from './logo/signature_logo.png';
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState('');
@@ -19,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="path_to_logo.png" alt="Company Logo" />
+        <img src={signature_logo} alt="Signature Logo" />
       </div>
       <div className={`navbar-middle ${isMenuOpen ? 'open' : ''}`}>
         {tabs.map((tab) => (

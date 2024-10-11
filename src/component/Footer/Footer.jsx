@@ -9,8 +9,8 @@ const Footer = () => {
     <div className="last">
     <footer className="footer text-dark">
       <div className="container py-5">
-        <div className="row">
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div className="row"> 
+          <div className="col-lg-5 col-md-8 mb-4 mb-lg-0">
             {/* <img src={Vector} alt="Logo" className="footer-logo mb-3" /> */}
             <address>
               Contact Us<br />
@@ -33,12 +33,12 @@ const Footer = () => {
             <ul className="list-unstyled">
             <li><a href="#">Home</a></li>
               <li><a href="/about">About Us</a></li>
-              <li><a href="#">Templates</a></li>
+              <li><a href="http://44.196.192.232:2034">Templates</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="/services">Contact</a></li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          {/* <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <h5>Categories</h5>
             <ul className="list-unstyled">
               <li><a href="/appDev-service">Resume</a></li>
@@ -48,7 +48,7 @@ const Footer = () => {
               <li><a href="/design-service">Photography</a></li>
               <li><a href="/iot-service">Music</a></li>
             </ul>
-          </div>
+          </div> */}
           <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
             <h5>Subscribe</h5>
             <p><i className="bi bi-telephone"></i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur maxime dolore voluptatem dolorum nemo! Totam.</p>

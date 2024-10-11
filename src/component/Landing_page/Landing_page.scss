@@ -114,14 +114,16 @@
         text-align: left;
 
         .landingh5 {
-          font-size: 2.2rem;
+          font-size: 1.3rem;
           color: #3498db;
           font-weight: 600;
+          margin-top: 1rem ;
         }
 
         .landingh1 {
-          font-size: 3.5rem;
-          margin: 1rem 0;
+          font-size: 2.5rem;
+          margin: 1.5rem 0;
+          padding: 0 0 1rem;
         }
 
         .spanstyle {
@@ -129,29 +131,30 @@
         }
 
         .landingp {
-          font-size: 1.3rem;
+          font-size: 1rem;
           margin-bottom: 1.8rem;
-          width:75%;
+          width:100%;
         }
 
         .buttons {
           display: flex;
           gap: 1rem;
 
-          .learnmore-button,
-          .makeappoint-button {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 10px;
-            padding: 20px 30px;
-            font-size: 1.2rem;
-          }
+          // .learnmore-button,
+          // .makeappoint-button {
+          //   padding: 0.5rem 0.5rem;
+          //   border: none;
+          //   cursor: pointer;
+          //   font-size: 1rem;
+          //   border-radius: 10px;
+          //   // padding: 20px 30px;
+          //   font-size: 0.9rem;
+          // }
 
           .learnmore-button {
             background-color: #3498db;
             color: #fff;
+            border-radius: 10px;
           }
 
           .view_pricing {
@@ -159,8 +162,8 @@
             color: #3498db;
             border: 1px solid #3498db;
             border-radius: 10px;
-            padding: 20px 30px;
-            font-size: 1.2rem;
+            padding: 15px 20px;
+            font-size: 1rem;
           }
         }
       }
@@ -328,6 +331,10 @@
       width: 40%;
       margin-left: 10%;
 
+      .spanstyle {
+        color: #3498db;
+      }
+
       .landingpage3_h3 {
         color: #3498db;
         font-size: 1.5em;
@@ -372,6 +379,10 @@
         width: 80%;
         margin-left: 0;
         text-align: center;
+
+        .spanstyle {
+          color: #3498db;
+        }
 
         p {
           font-size: 1.25em;
@@ -428,19 +439,19 @@
 
   // section 4
   .landingpage4 {
-    padding-left: 2rem; // Reduced padding for smaller screens
+    padding-left: 2rem; 
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; // Center text for smaller screens
+    text-align: center; 
     margin-bottom: 15%;
 
     .landingpage4-head {
       width: 100%;
-      font-size: 2rem; // Slightly smaller font size for smaller screens
-      margin-bottom: 4%; // Adjusted margin for spacing
+      font-size: 2rem; 
+      margin-bottom: 4%; 
     }
 
     .spanstyle {
@@ -448,8 +459,8 @@
     }
 
     .landingpage4_para {
-      width: 100%;
-      margin-bottom: 1.5rem; // Reduced margin for spacing
+      width: 65%;
+      margin-bottom: 1.3rem; 
     }
 
     .landingpage4_img_4 {
