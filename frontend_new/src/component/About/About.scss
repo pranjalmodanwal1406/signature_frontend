@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* General styles */
+.about {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7rem 2rem; /* Default padding */
+}
+
+.left {
+  flex: 1;
+  margin-right: 2rem; /* Adds space between text and image */
+}
+
+.left p {
+  width: auto; /* Adjusted width for smaller screens */
+}
+
+.about_img_1 {
+  flex: 1;
+  text-align: center;
+}
+
+.about_img_1 img {
+  height: auto;
+  max-width: 100%; /* Ensures image doesn't overflow its container */
+}
+
+.about2 {
+  background: #F9FFF8;
+  text-align: center;
+  padding: 5rem 2rem; /* Default padding */
+}
+
+.about2 p {
+  width: 90%;
+}
+
+.about-button {
+  margin-top: 1rem;
+  background: #3EB2F0;
+  color: white;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 1rem;
+}
+
+.about3 {
+  text-align: center;
+  padding: 5rem 2rem; /* Default padding */
+}
+
+.about-button3 {
+  margin-top: 1rem;
+  background: #3EB2F0;
+  color: white;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 1rem;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 992px) {
+  .about1 {
+    padding: 5rem 2rem; /* Adjusted padding for medium screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about2 {
+    padding: 4rem 2rem; /* Adjusted padding for medium screens */
+  }
+
+  .about3 {
+    padding: 4rem 2rem; /* Adjusted padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .about1 {
+    flex-direction: column; /* Stacks items vertically on small screens */
+    align-items: flex-start; /* Align items to the start of the container */
+    padding: 4rem 1rem; /* Adjusted padding for small screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left p {
+    width: auto; /* Adjusted width for small screens */
+  }
+
+  .about_img_1 {
+    margin-top: 2rem; /* Adds space between the text and image on small screens */
+    text-align: center; /* Centers image on small screens */
+  }
+
+  .about2 {
+    padding: 3rem 1rem; /* Adjusted padding for small screens */
+  }
+
+  .about3 {
+    padding: 3rem 1rem; /* Adjusted padding for small screens */
+  }
+
+  .about-button, .about-button3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about1 {
+    padding: 3rem 1rem; /* Adjusted padding for extra small screens */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about2 {
+    padding: 2rem 1rem; /* Adjusted padding for extra small screens */
+  }
+
+  .about3 {
+    padding: 2rem 1rem; /* Adjusted padding for extra small screens */
+  }
+}

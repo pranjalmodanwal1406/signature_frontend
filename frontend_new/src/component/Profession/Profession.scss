@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Profession {
+    width: 100%;
+    position: relative;
+    /* Ensure the ellipses are positioned relative to this container */
+}
+
+.Profession_section1_content {
+    text-align: center;
+    padding: 2rem;
+    width: auto;
+    position: relative;
+    /* Position relative to place ellipses */
+}
+
+.Profession_h4 {
+    color: #3EB2F0;
+}
+
+.Profession_h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.Profession_h1 span {
+    color: #3EB2F0;
+}
+
+.Profession_content {
+    font-size: 0.7rem;
+    margin: 1.5rem 0;
+}
+
+.section2_h2 {
+    font-weight: 700;
+    color: rgb(99, 97, 97);
+    font-size: 2.5rem;
+}
+
+
+
+// Section 2
+.AlternatingSections {
+    border: 2px solid white;
+    padding: 40px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.section__image,
+.section__content {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.section__image {
+    position: relative;
+}
+
+.section__image img {
+    width: 40vw;
+    height: 60vh;
+    object-fit: cover;
+    /* Ensures the image covers the whole container without distorting */
+}
+
+.section__image--left {
+    order: 1;
+    padding: 0;
+    padding-right: 0;
+}
+
+.section__content--right {
+    order: 2;
+    text-align: left;
+    padding: 0 40px;
+}
+
+.section__content--left {
+    order: 1;
+}
+
+.section__image--right {
+    order: 2;
+}
+
+.Industry_button {
+    color: white;
+    background-color: #3EB2F0;
+}
+
+@media (max-width: 1280px) {
+    .card-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        padding: 2rem;
+        background-color: #ecf1f3;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section__image,
+    .section__content {
+        order: 0;
+        text-align: center;
+    }
+
+    .section__image img {
+        width: 80vw;
+        height: 35vh;
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-left: 10%;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section__image,
+    .section__content {
+        order: 0;
+        text-align: center;
+    }
+
+    .section__image img {
+        width: 80vw;
+        height: 35vh;
+        object-fit: cover;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-left: 10%;
+    }
+
+    .image-grid .row {
+        gap: 0.75rem;
+        padding-left: 8rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section__image,
+    .section__content {
+        order: 0;
+        text-align: center;
+    }
+
+    .section__image img {
+        width: 75vw;
+        height: 25vh;
+        object-fit: cover;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* Design Code for Ellipses in Section 1 */
+.Profession_section1_content .profession_design {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 25%;
+    z-index: 1;
+    /* Ensure the ellipses are behind the content */
+}
+
+.Profession_section1_content .profession_design div {
+    position: absolute;
+    border-radius: 50%;
+}
+
+// .ellipse55 { width: 6px; height: 6px; left: 10%; top: 80%; background: #3eb2f0; }
+// .ellipse62 { width: 8px; height: 8px; left: 20%; top: 60%; background: #4d4d4d; }
+// .ellipse59 { width: 14px; height: 14px; left: 30%; top: 40%; background: #0047ff; }
+// .ellipse72 { width: 14px; height: 14px; left: 70%; top: 20%; background: #0047ff; }
+// .ellipse60 { width: 6px; height: 6px; left: 50%; top: 30%; background: #0047ff; }
+// .ellipse61 { width: 14px; height: 14px; left: 80%; top: 10%; background: #3eb2f0; }
+// .ellipse56 { width: 14px; height: 14px; left: 40%; top: 70%; background: #3eb2f0; }
+.ellipse57 {
+    width: 14px;
+    height: 14px;
+    left: 60%;
+    top: 80%;
+    background: #0047ff;
+}
+
+.ellipse64 {
+    width: 14px;
+    height: 14px;
+    left: 90%;
+    top: 70%;
+    background: #3eb2f0;
+}
+
+.ellipse58 {
+    width: 6px;
+    height: 6px;
+    left: 20%;
+    top: 50%;
+    background: #0047ff;
+}
+
+.ellipse71 {
+    width: 6px;
+    height: 6px;
+    left: 70%;
+    top: 10%;
+    background: #0047ff;
+}
+
+.ellipse63 {
+    width: 14px;
+    height: 14px;
+    left: 60%;
+    top: 40%;
+    background: #2278d4;
+}
+
+// .group9079 { width: 142px; height: 107px; left: 10%; top: 70%; }
+// .group9079 .ellipse65 { width: 6px; height: 6px; left: 20%; top: 0px; background: #3eb2f0; }
+// .group9079 .ellipse67 { width: 14px; height: 14px; left: 0px; top: 40px; background: #0047ff; }
+// .group9079 .ellipse68 { width: 14px; height: 14px; left: 40%; top: 50px; background: #3eb2f0; }
+// .group9079 .ellipse69 { width: 6px; height: 6px; left: 30%; top: 30px; background: #0047ff; }
+// .group9079 .ellipse70 { width: 14px; height: 14px; left: 20%; top: 10px; background: #2278d4; }

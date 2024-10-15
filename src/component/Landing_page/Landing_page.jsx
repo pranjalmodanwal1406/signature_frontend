@@ -15,7 +15,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import Footer from '../Footer/Footer';
 
 function PrevArrow(props) {
-    
+
     const { className, onClick } = props;
     return (
         <div className={`${className} custom-prev-arrow`} onClick={onClick}>
@@ -66,11 +66,11 @@ function LandingPage() {
     const carouselImages1 = [Slide1, Slide2, Slide3];
 
     const settings1 = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     };
 
     const testimonials = [
@@ -140,13 +140,13 @@ function LandingPage() {
                             </div>
                         </div>
                         <div className='content'>
-                            <h5 className='landingh5'>At Mission we are</h5>
+                            <h5 className='landingh5'>Create Professional Email Signatures in Minutes</h5>
                             <h1 className='landingh1'>
-                                Make Your Mark With <br /> Every<span className='spanstyle'> Email Signature </span>
-                                Solutions For Style
+                            Design personalized, brand-enhancing <br /><span className='spanstyle'>email Signatures </span>
+                            effortlessly—no coding required.
                             </h1>
                             <p className='landingp'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi nisi neque laborum optio facere aliquid enim velit. Commodi, ad.
+                            Stand out with custom email signatures that reflect your brand's identity. Our easy-to-use platform lets you design, customize, and implement signatures that leave a lasting impression.
                             </p>
                             <div className='buttons'>
                                 <button className='learnmore-button'>Learn More</button>
@@ -199,7 +199,7 @@ function LandingPage() {
                 {/* section 4 */}
                 <section className='landingpage4'>
                     <h2 className='landingpage4-head'>Create and manage the email <span className='spanstyle'>Signature? </span> you need</h2>
-                    <p className='landingpage4_para'>WiseStamp provides a seamless solution for managing your email signatures across your organization, ensuring every email strengthens your brand and maximizes your marketing potential.</p>
+                    <p className='landingpage4_para'>Signatouch provides a seamless solution for managing your email signatures across your organization,ensuring every email strengthens your brand and maximizes your marketing potential.</p>
                     <div className="landingpage4_img_4">
                         <div className='image_1'>
                             <img src={home01} alt="" />
@@ -209,10 +209,13 @@ function LandingPage() {
                         </div>
                     </div>
                     <div className='landingpage4-button-div'>
-                        <button className='landingpage4-button'>
-                            Create
-                        </button>
+                        <a href="http://44.196.192.232:2034" target="_blank" rel="noopener noreferrer">
+                            <button className='landingpage4-button'>
+                                Create
+                            </button>
+                        </a>
                     </div>
+
                 </section>
 
                 {/* section 5 */}

@@ -1,0 +1,116 @@
+// // section 1
+// .Blog_specification3_card1_h3{
+//     font-size: 1.5rem;
+//     font-weight: 400;
+// }
+// .Blog_specification_img_1 img{
+//     width: 100%;
+//     height: 60%;
+// }
+// .Blog_specification1_content {
+//     position: absolute;
+//     color: white;
+//     z-index: 2;
+//     top: 20%;
+//     width: 100%;
+// }
+
+// .Blog_specification1_box {
+//     position: absolute;
+//     background-color: rgba(0, 0, 0, 0.546);
+//     z-index: 1;
+//     height: 72%;
+//     width: 100%;
+//     top: 0;
+// }
+
+// .Blog_specification1_content_h1 {
+//     margin: 5%;
+//     text-transform: uppercase;
+//     font-weight: 400;
+// }
+
+// .Blog_specification1_p1 {
+//     font-size: 1.2rem;
+//     margin: 5%;
+// }
+
+// .Blog_specification1_p2 {
+//     font-size: 0.8rem;
+//     margin-left: 5%;
+// }
+
+.Blog_specification {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .Blog_spec_section1 {
+        order: 1;
+    }
+
+
+
+
+    // section 2
+    .Blog_specification_section2 {
+        display: flex;
+        order: 2;
+
+        .left_div {
+            width: 80%;
+            margin: 5%;
+        }
+
+        .Blog_specification_h1 {
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .Blog_specification_section2_ul {
+            margin: 5%;
+        }
+
+
+        .right_div {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .Blog_specification {
+        display: flex !important    ;
+        flex-direction: column !important ; /* Stack the image at the bottom */
+    }
+
+    .Blog_spec_section1 {
+        order: 2;
+    }
+
+    .Blog_specification_section2{
+        order:1  ;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .Blog_specification {
+        display: flex !important    ;
+        flex-direction: column !important ; /* Stack the image at the bottom */
+    }
+
+    .Blog_spec_section1 {
+        order: 2;
+    }
+
+    .Blog_specification_section2{
+        order:1  ;
+    }
+}
