@@ -108,22 +108,20 @@
         background: #3eb2f0;
       }
 
-      .content001 {
+      .content {
         flex: 1;
-        padding-left: 8rem;
+        padding-left: 2rem;
         text-align: left;
 
         .landingh5 {
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           color: #3498db;
           font-weight: 600;
-          margin-top: 1rem ;
         }
 
         .landingh1 {
           font-size: 2.5rem;
-          margin: 1.5rem 0;
-          padding: 0 0 1rem;
+          margin: 1rem 0;
         }
 
         .spanstyle {
@@ -132,38 +130,30 @@
 
         .landingp {
           font-size: 1rem;
-          margin-bottom: 1.8rem;
-          width:100%;
+          margin-bottom: 1.5rem;
         }
 
         .buttons {
           display: flex;
           gap: 1rem;
 
-          // .learnmore-button,
-          // .makeappoint-button {
-          //   padding: 0.5rem 0.5rem;
-          //   border: none;
-          //   cursor: pointer;
-          //   font-size: 1rem;
-          //   border-radius: 10px;
-          //   // padding: 20px 30px;
-          //   font-size: 0.9rem;
-          // }
+          .learnmore-button,
+          .makeappoint-button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+          }
 
           .learnmore-button {
             background-color: #3498db;
             color: #fff;
-            border-radius: 10px;
           }
 
           .view_pricing {
             background-color: #fff;
             color: #3498db;
             border: 1px solid #3498db;
-            border-radius: 10px;
-            padding: 15px 20px;
-            font-size: 1rem;
           }
         }
       }
@@ -237,13 +227,13 @@
       border-right: 2px solid #3498db;
       padding: 2rem;
 
-      .box-1-h1 {
+      h1 {
         color: #3498db;
       }
 
-      .box-1-p {
+      p {
         font-weight: 600;
-        font-size: 3rem;
+        font-size: 1.3rem;
       }
     }
 
@@ -331,13 +321,8 @@
       width: 40%;
       margin-left: 10%;
 
-      .spanstyle {
-        color: #3498db;
-      }
-
       .landingpage3_h3 {
         color: #3498db;
-        font-size: 1.5em;
       }
 
       p {
@@ -380,10 +365,6 @@
         margin-left: 0;
         text-align: center;
 
-        .spanstyle {
-          color: #3498db;
-        }
-
         p {
           font-size: 1.25em;
         }
@@ -402,7 +383,6 @@
         }
 
         .slick-slide img {
-          // width: 100%;
           width: 100%;
           height: 100%;
         }
@@ -439,19 +419,19 @@
 
   // section 4
   .landingpage4 {
-    padding-left: 2rem; 
+    padding-left: 2rem; // Reduced padding for smaller screens
     height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; 
+    text-align: center; // Center text for smaller screens
     margin-bottom: 15%;
 
     .landingpage4-head {
       width: 100%;
-      font-size: 2rem; 
-      margin-bottom: 4%; 
+      font-size: 2rem; // Slightly smaller font size for smaller screens
+      margin-bottom: 4%; // Adjusted margin for spacing
     }
 
     .spanstyle {
@@ -459,8 +439,8 @@
     }
 
     .landingpage4_para {
-      width: 65%;
-      margin-bottom: 1.3rem; 
+      width: 100%;
+      margin-bottom: 1.5rem; // Reduced margin for spacing
     }
 
     .landingpage4_img_4 {
@@ -513,7 +493,7 @@
     }
 
     .landingpage4_para {
-      width: 90%;
+      width: 65%;
     }
 
     .landingpage4_img_4 {
@@ -556,52 +536,107 @@
     font-size: 2rem;
   }
 
-  .testimonial-carousel {
-    .testimonial-slider {
+  // .testimonial-carousel {
+  //   .testimonial-slider {
 
-      .slick-prev,
-      .slick-next {
-        color: #3EB2F0;
-      }
+  //     .slick-prev,
+  //     .slick-next {
+  //       color: #3EB2F0;
+  //     }
 
-      .testimonial-card {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
-        width: 100px;
-        // text-align: center;
-        margin: 0 auto;
+  //     .testimonial-card {
+  //       background: white;
+  //       border-radius: 10px;
+  //       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  //       padding: 1rem;
+  //       width: 100px;
+  //       // text-align: center;
+  //       margin: 0 auto;
 
-        .stars {
-          color: #FFD700;
-          font-size: 1.2rem;
-        }
+  //       .stars {
+  //         color: #FFD700;
+  //         font-size: 1.2rem;
+  //       }
 
-        p {
-          font-size: 0.9rem;
-          color: #666;
-          margin: 1rem 0;
-        }
+  //       p {
+  //         font-size: 0.9rem;
+  //         color: #666;
+  //         margin: 1rem 0;
+  //       }
 
-        .testimonial-info {
-          display: flex;
-          margin-top: 1rem;
+  //       .testimonial-info {
+  //         display: flex;
+  //         margin-top: 1rem;
 
-          img {
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-          }
+  //         img {
+  //           border-radius: 50%;
+  //           width: 60px;
+  //           height: 60px;
+  //         }
 
-          h4 {
-            margin-left: 1rem;
-            color: #3EB2F0;
-            font-size: 1rem;
-          }
-        }
-      }
+  //         h4 {
+  //           margin-left: 1rem;
+  //           color: #3EB2F0;
+  //           font-size: 1rem;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  .carousel img {
+    width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    padding: 1em;
+
+  }
+  
+  @media screen and (min-width: 576px) {
+    .carousel-inner {
+      display: flex;
+      width: 90%;
+      margin-inline: auto;
+      padding: 1em 0;
+      overflow: hidden;
+    }
+  
+    .carousel-item {
+      display: block;
+      margin-right: 0;
+      flex: 0 0 calc(100% / 2);
     }
   }
+  
+  @media screen and (min-width: 768px) {
+    .carousel-item {
+      display: block;
+      margin-right: 0;
+      flex: 0 0 calc(100% / 3);
+    }
+  }
+  
+  .carousel .card {
+    margin: 0 0.5em;
+    border: 0;
+    // background-color: red;
+    width: 100%;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 3rem;
+    height: 3rem;
+    background-color: grey;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
 }
 }

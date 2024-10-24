@@ -13,6 +13,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Footer from '../Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+
 
 function PrevArrow(props) {
 
@@ -77,31 +81,31 @@ function LandingPage() {
         {
             image: avatar,
             name: 'John Doe',
-            feedback: 'Get a professional email signature website to enhanced my brand image and gave customer engagement. Great email signature',
+            feedback: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
             stars: 5,
         },
         {
             image: avatar,
             name: 'Jane Smith',
-            feedback: 'Get a professional email signature website to enhanced my brand image and gave customer engagement. Great email signature',
+            feedback: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
             stars: 4,
         },
         {
             image: avatar,
             name: 'Alice Johnson',
-            feedback: 'Get a professional email signature website to enhanced my brand image and gave customer engagement. Great email signature',
+            feedback: 'When an unknown printer took a galley of type and scrambled it to make a type specimen book.',
             stars: 5,
         },
         {
             image: avatar,
             name: 'John Doe',
-            feedback: 'Get a professional email signature website to enhanced my brand image and gave customer engagement. Great email signature',
-            stars: 4,
+            feedback: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            stars: 5,
         },
         {
             image: avatar,
             name: 'Jane Smith',
-            feedback: 'Get a professional email signature website to enhanced my brand image and gave customer engagement. Great email signature',
+            feedback: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
             stars: 3,
         },
         {
@@ -139,14 +143,14 @@ function LandingPage() {
                                 <div className="ellipse70"></div>
                             </div>
                         </div>
-                        <div className='content001'>
+                        <div className='content'>
                             <h5 className='landingh5'>Create Professional Email Signatures in Minutes</h5>
                             <h1 className='landingh1'>
-                                Design personalized, brand-enhancing <br/><span className='spanstyle'>email Signatures </span>
+                                Design personalized, brand-enhancing <br /><span className='spanstyle'>email Signatures </span>
                                 effortlessly—no coding required.
                             </h1>
                             <p className='landingp'>
-                            Stand out with custom email signatures that reflect your brand's identity. Our easy-to-use platform lets you design, customize, and implement signatures that leave a lasting impression
+                                Stand out with custom email signatures that reflect your brand's identity. Our easy-to-use platform lets you design, customize, and implement signatures that leave a lasting impression.
                             </p>
                             <div className='buttons'>
                                 <button className='learnmore-button'>Learn More</button>
@@ -179,28 +183,41 @@ function LandingPage() {
                 <section className='landingpage3'>
                     <div className="landingpage3-content">
                         <h3 className='landingpage3_h3'>Templates</h3>
-                        <h1>A range of great designer <span className='spanstyle'>Templates</span>
-                        </h1>
+                        <h1>A range of great designer <span>Templates</span></h1>
                         <p>For your easy access and editing, here we have templates built by designers</p>
                         <button className='landingpage3-button2'>
                             Show More
                         </button>
                     </div>
                     <div className="landingpage3_img_2">
-                        <Slider {...settings1}>
-                            {carouselImages1.map((image, index) => (
-                                <div key={index}>
-                                    <img src={image} alt={`Slide ${index + 1}`} />
+                        <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner" style={{ padding: '150px' }}>
+                                <div class="carousel-item active">
+                                    <img src={Slide1} class="d-block w-70" alt="..." />
                                 </div>
-                            ))}
-                        </Slider>
+                                <div class="carousel-item">
+                                    <img src={Slide2} class="d-block w-70" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src={Slide3} class="d-block w-70" alt="..." />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </section>
 
                 {/* section 4 */}
                 <section className='landingpage4'>
                     <h2 className='landingpage4-head'>Create and manage the email <span className='spanstyle'>Signature? </span> you need</h2>
-                    <p className='landingpage4_para'>Signatouch provides a seamless solution for managing your email signatures across your organization, ensuring every email strengthens your brand and maximizes your marketing potential.</p>
+                    <p className='landingpage4_para'>Signatouch provides a seamless solution for managing your email signatures across your organization,ensuring every email strengthens your brand and maximizes your marketing potential.</p>
                     <div className="landingpage4_img_4">
                         <div className='image_1'>
                             <img src={home01} alt="" />
@@ -210,33 +227,107 @@ function LandingPage() {
                         </div>
                     </div>
                     <div className='landingpage4-button-div'>
-                        <a href="http://44.196.192.232:2034" target="_blank" rel="noopener noreferrer">
+                        <a href="http://44.196.192.232:2001" target="_blank" rel="noopener noreferrer">
                             <button className='landingpage4-button'>
                                 Create
                             </button>
                         </a>
                     </div>
+
                 </section>
 
                 {/* section 5 */}
                 <section className='landingpage5'>
                     <h3 style={{ color: '#3EB2F0' }}>Feedbacks</h3>
                     <h1 className='h16'>Our Customers Say Something <span>About Us</span></h1>
-                    <div className='testimonial-carousel'>
-                        <Slider {...settings} className='testimonial-slider'>
-                            {testimonials.map((testimonial, index) => (
-                                <div className='testimonial-card' key={index}>
-                                    <div className='stars'>
-                                        {'★'.repeat(testimonial.stars) + '☆'.repeat(5 - testimonial.stars)}
+                    <div id="testimonialCarousel" className="carousel slide" data-bs-ride="carousel">
+                        <div className="carousel-inner">
+                            {/* First Carousel Item - Set active class here */}
+                            <div className="carousel-item active">
+                                <div className="card shadow-sm rounded-3">
+                                    <div className="quotes display-2 text-body-tertiary">
+                                        <i className="bi bi-quote"></i>
                                     </div>
-                                    <p>{testimonial.feedback}</p>
-                                    <div className='testimonial-info'>
-                                        <img src={testimonial.image} alt={testimonial.name} />
-                                        <h4>{testimonial.name}</h4>
+                                    <div className="card-body">
+                                        <p className="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+                                        <div className="d-flex align-items-center pt-2">
+                                            <img src="https://codingyaar.com/wp-content/uploads/square-headshot-1.png" alt="Jane Doe" />
+                                            <div>
+                                                <h5 className="card-title fw-bold">Jane Doe</h5>
+                                                <span className="text-secondary">CEO, Example Company</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            ))}
-                        </Slider>
+                            </div>
+
+                            {/* Second Carousel Item */}
+                            <div className="carousel-item">
+                                <div className="card shadow-sm rounded-3">
+                                    <div className="quotes display-2 text-body-tertiary">
+                                        <i className="bi bi-quote"></i>
+                                    </div>
+                                    <div className="card-body">
+                                        <p className="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+                                        <div className="d-flex align-items-center pt-2">
+                                            <img src="https://codingyaar.com/wp-content/uploads/square-headshot-2.png" alt="June Doe" />
+                                            <div>
+                                                <h5 className="card-title fw-bold">June Doe</h5>
+                                                <span className="text-secondary">CEO, Example Company</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Third Carousel Item */}
+                            <div className="carousel-item">
+                                <div className="card shadow-sm rounded-3">
+                                    <div className="quotes display-2 text-body-tertiary">
+                                        <i className="bi bi-quote"></i>
+                                    </div>
+                                    <div className="card-body">
+                                        <p className="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+                                        <div className="d-flex align-items-center pt-2">
+                                            <img src="https://codingyaar.com/wp-content/uploads/square-headshot-2.png" alt="June Doe" />
+                                            <div>
+                                                <h5 className="card-title fw-bold">June Doe</h5>
+                                                <span className="text-secondary">CEO, Example Company</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Fourth Carousel Item */}
+                            <div className="carousel-item">
+                                <div className="card shadow-sm rounded-3">
+                                    <div className="quotes display-2 text-body-tertiary">
+                                        <i className="bi bi-quote"></i>
+                                    </div>
+                                    <div className="card-body">
+                                        <p className="card-text">"Some quick example text to build on the card title and make up the bulk of the card's content."</p>
+                                        <div className="d-flex align-items-center pt-2">
+                                            <img src="https://codingyaar.com/wp-content/uploads/square-headshot-2.png" alt="June Doe" />
+                                            <div>
+                                                <h5 className="card-title fw-bold">June Doe</h5>
+                                                <span className="text-secondary">CEO, Example Company</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Carousel Controls */}
+                        <button className="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </section>
 

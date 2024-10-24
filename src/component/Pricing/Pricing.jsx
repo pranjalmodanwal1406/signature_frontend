@@ -157,13 +157,27 @@ function Pricing() {
                         </button>
                     </div>
                     <div className="pricing_img_2">
-                        <Slider {...settings}>
-                            {carouselImages.map((image, index) => (
-                                <div key={index}>
-                                    <img src={image} alt={`Slide ${index + 1}`} />
+                    <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner" style={{ padding: '150px' }}>
+                                <div class="carousel-item active">
+                                    <img src={Slide1} class="d-block w-70" alt="..." />
                                 </div>
-                            ))}
-                        </Slider>
+                                <div class="carousel-item">
+                                    <img src={Slide2} class="d-block w-70" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src={Slide3} class="d-block w-70" alt="..." />
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
                 </section>
 

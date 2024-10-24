@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="list-unstyled">
             <li><a href="#">Home</a></li>
               <li><a href="/about">About Us</a></li>
-              <li><a href="http://44.196.192.232:2034">Templates</a></li>
+              <li><a href="http://44.196.192.232:2001">Templates</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="/services">Contact</a></li>
             </ul>
