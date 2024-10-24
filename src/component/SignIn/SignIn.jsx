@@ -16,7 +16,7 @@ function Signin() {
         setSuccessMessage('');
 
         try {
-            const response = await fetch('http://13.200.240.28:9006/api/auth/login', {
+            const response = await fetch('http://44.196.192.232:9006/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ function Signin() {
                     // Save the token to local storage or context
                     localStorage.setItem('token', data.token);
                     // Redirect to the desired page on a different port
-                    window.location.replace('http://44.196.192.232:3008');
+                    window.location.replace('http://44.196.192.232:2001');
                 } else {
                     setErrorMessage(data.message || 'Login failed. Please check your credentials.');
                 }
