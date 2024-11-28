@@ -23,7 +23,7 @@ function SignUp() {
         }
 
         try {
-            const response = await fetch('http://44.196.192.232:9006/api/auth/register', {
+            const response = await fetch('http://44.196.64.110:9006/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
