@@ -33,7 +33,7 @@ function ForgetPassword() {
         const otpCode = otp.join('');
 
         try {
-            const response = await axios.post('http://13.200.240.28:9006/api/auth/verifyOTP', {
+            const response = await axios.post('http://44.196.64.110:9006/api/auth/verifyOTP', {
                 otp: otpCode
             });
 
