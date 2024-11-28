@@ -33,7 +33,7 @@ function ForgetPassword_newPassword() {
                 return;
             }
 
-            const response = await axios.post('http://44.196.192.232:9006/api/auth/resetPassword', {
+            const response = await axios.post('http://44.196.64.110:9006/api/auth/resetPassword', {
                 token,
                 newPassword: password
             });
