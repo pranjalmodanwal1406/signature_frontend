@@ -17,7 +17,7 @@ function ForgetPassword() {
         e.preventDefault();
         try {
             // Send a POST request to your backend server to trigger OTP email
-            const response = await axios.post('http://13.200.240.28:9006/api/auth/send-email', { email });
+            const response = await axios.post('http://44.196.64.110:9006/api/auth/send-email', { email });
 
             if (response.data.success) {
                 // Redirect to OTP verification page if email is sent successfully
