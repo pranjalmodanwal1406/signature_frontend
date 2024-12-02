@@ -238,8 +238,8 @@ function LandingPage() {
                         <a href="http://44.196.64.110:2222/SignIn" target="_blank" rel="noopener noreferrer">
                             <button className='landingpage4-button'>
                                 Create
-                            </button>
-                        </a>
+                            </button>      
+                        </a>  
                     </div>
 
                 </section>
