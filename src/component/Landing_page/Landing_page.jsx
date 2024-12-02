@@ -222,7 +222,7 @@ function LandingPage() {
                 </section>
 
 
-                {/* section 4 */}
+                {/* section 4      */}
                 <section className='landingpage4'>
                     <h2 className='landingpage4-head'>Create and manage the email <span className='spanstyle'>Signature? </span> you need</h2>
                     <p className='landingpage4_para'>Signatouch provides a seamless solution for managing your email signatures across your organization,ensuring every email strengthens your brand and maximizes your marketing potential.</p>
