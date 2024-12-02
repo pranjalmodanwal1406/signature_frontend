@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Guide {
+  width: 100%;
+}
+
+// Section 1
+.Guide_section1_content {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* To place ellipses in the background */
+}
+
+.Guide_h4 {
+  color: #3EB2F0;
+}
+
+.Guide_h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.Guide_h1 span {
+  color: #3EB2F0;
+}
+
+.Guide_content {
+  font-size: 0.7rem;
+  margin: 1.5rem 0;
+}
+
+.guide-design {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 2rem;
+  z-index: 1; /* Ensure the ellipses are behind the content */
+
+
+  .guide-ellipse55 { 
+    width: 6px; height: 6px; left: 10%; top: 80%; background: #3eb2f0; }
+.ellipse59 { width: 14px; height: 14px; left: 30%; top: 40%; background: #0047ff; position: absolute;}
+.ellipse72 { width: 14px; height: 14px; left: 70%; top: 20%; background: #0047ff; position: absolute;}
+.ellipse60 { width: 6px; height: 6px; left: 50%; top: 30%; background: #0047ff; }
+// .ellipse61 { width: 14px; height: 14px; left: 80%; top: 10%; background: #3eb2f0; }
+// .ellipse56 { width: 14px; height: 14px; left: 40%; top: 70%; background: #3eb2f0; }
+// .ellipse57 { width: 14px; height: 14px; left: 60%; top: 80%; background: #0047ff; }
+// .ellipse64 { width: 14px; height: 14px; left: 90%; top: 70%; background: #3eb2f0; }
+.ellipse58 { width: 6px; height: 6px; left: 20%; top: 50%; background: #0047ff; }
+.ellipse71 { width: 6px; height: 6px; left: 70%; top: 10%; background: #0047ff; }
+// .ellipse63 { width: 14px; height: 14px; left: 60%; top: 40%; background: #2278d4; }
+// .group9079 { width: 142px; height: 107px; left: 10%; top: 70%; }
+// .group9079 .ellipse65 { width: 6px; height: 6px; left: 20%; top: 0px; background: #3eb2f0; }
+// .group9079 .ellipse67 { width: 14px; height: 14px; left: 0px; top: 40px; background: #0047ff; }
+// .group9079 .ellipse68 { width: 14px; height: 14px; left: 40%; top: 50px; background: #3eb2f0; }
+// .group9079 .ellipse69 { width: 6px; height: 6px; left: 30%; top: 30px; background: #0047ff; }
+// .group9079 .ellipse70 { width: 14px; height: 14px; left: 20%; top: 10px; background: #2278d4; }
+}
+
+.Guide_section1_content .guide-design div {
+  position: absolute !important;
+  border-radius: 50% !important;
+}
+
+
+
+// Section 2
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-self: center;
+
+    img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+    }
+  }
+}
+
+// Media queries for responsiveness
+@media (max-width: 1200px) {
+  .Guide_h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Guide_section1_content {
+    padding: 1.5rem;
+  }
+
+  .Guide_h1 {
+    font-size: 1.75rem;
+  }
+
+  .Guide_content {
+    font-size: 0.8rem;
+  }
+
+  .image-grid {
+    gap: 1.5rem;
+
+    .row {
+      gap: 0.75rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Guide_section1_content {
+    padding: 1rem;
+  }
+
+  .Guide_h1 {
+    font-size: 1.5rem;
+  }
+
+  .Guide_content {
+    font-size: 0.6rem;
+  }
+
+  .image-grid {
+    gap: 2rem;
+
+    .row {
+      gap: 0.5rem;
+      padding-left: 6rem;
+      padding-right: 3rem;
+
+      img {
+        max-width: 100px;
+      }
+    }
+  }
+}
+
+// Section 3
+.section3_p {
+  margin: 0 auto;
+  padding: 5rem 1rem 2.5rem; // Center the element with auto margins and adjust paddings
+  text-align: center;
+}
+
+.section3_content_1 {
+  text-align: center;
+}
+
+.Guide_para {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #ecf1f3;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  width: calc(33.333% - 2rem);
+  max-width: 300px;
+  border: 2px solid white;
+  position: relative;
+  overflow: visible;
+
+  .card-image {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-content {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    height: auto;
+    width: auto;
+  }
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0; // Adjust margins to ensure buttons are well spaced
+
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .button-create {
+    background-color: #3EB2F0;
+    color: white;
+    border: none;
+  }
+
+  .button-learn {
+    background-color: white;
+    color: #3EB2F0;
+    border: 2px solid #3EB2F0;
+  }
+}
+
+// Responsive styles for cards
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
