@@ -235,7 +235,7 @@ function LandingPage() {
                         </div>
                     </div>
                     <div className='landingpage4-button-div'>
-                        <a href="http://localhost:5173/signIn" target="_blank" rel="noopener noreferrer">
+                        <a href="http://44.196.64.110:2222/SignIn" target="_blank" rel="noopener noreferrer">
                             <button className='landingpage4-button'>
                                 Create
                             </button>
