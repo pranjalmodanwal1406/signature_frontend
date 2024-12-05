@@ -26,7 +26,7 @@ const Blog = () => {
 useEffect(() => {
   // Fetch the blog data from the API
   axios
-    .get("http://localhost:9006/api/blog/getBlog")
+    .get("http://44.196.64.110:9006/api/blog/getBlog")
     .then((response) => {
       // Access the 'data' field from the response and check if it's an array
       const blogData = response.data?.data; // response.data is the object that contains the 'data' array
@@ -44,7 +44,7 @@ useEffect(() => {
 }, []);
 useEffect(() => {
   axios
-    .get("http://localhost:9006/api/blog/getBlog")
+    .get("http://44.196.64.110:9006/api/blog/getBlog")
     .then((response) => {
       const blogData = response.data?.data; 
       if (Array.isArray(blogData)) {

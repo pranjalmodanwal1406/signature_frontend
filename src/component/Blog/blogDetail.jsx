@@ -20,7 +20,7 @@ export default function BlogDetail() {
   const getAllData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:9006/api/blog/getBlog/${id}`
+        `http://44.196.64.110:9006/api/blog/getBlog/${id}`
       );
       console.log(response.data);
 
