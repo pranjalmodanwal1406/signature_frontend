@@ -21,10 +21,9 @@ import ForgetPassword from './component/ForgetPassword/ForgetPassword';
 import ForgetPassword_otp from './component/ForgetPassword_otp/ForgetPassword_otp';
 import ForgetPassword_newPassword from './component/ForgetPassword_newPassword/ForgetPassword_newPasssword';
 import SignUp from './component/SignUp/SignUp';
-
 import Test from './component/Test/Test';
 import Landing_page from './component/Landing_page/Landing_page';
-
+import BlogDetail from './component/Blog/blogDetail';
 
 function App() {
   return (
@@ -46,7 +45,8 @@ function App() {
         <Route path="/Product_updates" element={<Product_updates />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legal" element={<Legal />} />
-        <Route path="/Footer" element={<Footer />} />        
+        <Route path="/Footer" element={<Footer />} />    
+        <Route path="/Blog/:id" element={<BlogDetail />} />    
         {/* <Route path="*" element={<PageNotFound />} /> */}
         {/* Auth Routes */}
         <Route path="/SignIn" element={<SignIn />} />
