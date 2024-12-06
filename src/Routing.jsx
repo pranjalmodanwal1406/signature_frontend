@@ -15,6 +15,8 @@ import Product_updates from './component/Product_updates/Product_updates';
 import Contact from './component/Contact/Contact';
 import Legal from './component/Legal/Legal';
 import Footer from './component/Footer/Footer';
+import Feedback from "./component/Feedback/Feedback";
+
 // auth pages
 import SignIn from './component/SignIn/SignIn';
 import ForgetPassword from './component/ForgetPassword/ForgetPassword';
@@ -45,8 +47,10 @@ function App() {
         <Route path="/Product_updates" element={<Product_updates />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legal" element={<Legal />} />
-        <Route path="/Footer" element={<Footer />} />    
-        <Route path="/Blog/:id" element={<BlogDetail />} />    
+        <Route path="/Footer" element={<Footer />} /> 
+        <Route path="/feedback" element={<Feedback />} />   
+        <Route path="/Blog/:id" element={<BlogDetail />} />  
+          
         {/* <Route path="*" element={<PageNotFound />} /> */}
         {/* Auth Routes */}
         <Route path="/SignIn" element={<SignIn />} />

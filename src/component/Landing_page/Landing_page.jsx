@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import './Landing_page.scss';
 import home1 from './image/home1.png';
 import home2 from './image/home2.png';
@@ -84,44 +85,22 @@ function LandingPage() {
         slidesToScroll: 1,
     };
 
-    const testimonials = [
-        {
-            image: avatar,
-            name: 'John Doe',
-            feedback: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            stars: 5,
-        },
-        {
-            image: avatar,
-            name: 'Jane Smith',
-            feedback: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
-            stars: 4,
-        },
-        {
-            image: avatar,
-            name: 'Alice Johnson',
-            feedback: 'When an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-            stars: 5,
-        },
-        {
-            image: avatar,
-            name: 'John Doe',
-            feedback: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            stars: 5,
-        },
-        {
-            image: avatar,
-            name: 'Jane Smith',
-            feedback: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',
-            stars: 3,
-        },
-        {
-            image: avatar,
-            name: 'Alice Johnson',
-            feedback: 'When an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-            stars: 5,
-        },
-    ];
+    const [feedbacks, setFeedbacks] = useState([]);
+    const imageSrc =
+      "https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg";
+  
+    useEffect(() => {
+      axios
+        .get("http://44.196.64.110:9006/api/feedback/") 
+        .then((response) => {
+          setFeedbacks(response.data.data);
+          console.log("abc", response.data.data)
+        })
+        .catch((error) => {
+          console.error("Error fetching feedbacks:", error);
+        });
+    }, []);
+
 
     return (
         <>
@@ -238,176 +217,47 @@ function LandingPage() {
                         <a href="http://44.196.64.110:2222/SignIn" target="_blank" rel="noopener noreferrer">
                             <button className='landingpage4-button'>
                                 Create
-                            </button>      
-                        </a>  
+                            </button>
+                        </a>
                     </div>
 
                 </section>
 
                 {/* section 5 */}
-                <section className='landingpage5 reviews container'>
-                    <h3 style={{ color: '#3EB2F0' }}>Feedbacks</h3>
-                    <h1 className='h16'>Our Customers Say Something <span style={{ color: '#3EB2F0' }}>About Us</span></h1>
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={3}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        navigation={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                    >
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center ">
-                                    <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-                                    </div>
-                                </div>
-                            </Card>
+                <section className="landingpage5 reviews container">
+        <h3 style={{ color: "#3EB2F0" }}>Feedbacks</h3>
+        <h1 className="h16">
+          Our Customers Say Something <span style={{ color: "#3EB2F0" }}>About Us</span>
+        </h1>
 
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center ">
-                                    <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-                                    </div>
-                                </div>
-                            </Card>
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center ">
-                                    <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-                                    </div>
-                                </div>
-                            </Card>
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center ">
-                                    <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-
-                                    </div>
-                                </div>
-                            </Card>
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center">
-                                    <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-                                        <span>
-                                            {/* <b>5.0</b>/5.0 rating */}
-                                        </span>
-                                        {/* <div className="d-flex justify-content-center ">
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                  </div> */}
-                                    </div>
-                                </div>
-                            </Card>
-
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <Card className='w-100'>
-                                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
-                                    <img src={"https://static.vecteezy.com/system/resources/previews/007/409/979/original/people-icon-design-avatar-icon-person-icons-people-icons-are-set-in-trendy-flat-style-user-icon-set-vector.jpg"} alt="reviews" className='w-50 h-50' />
-                                    <h5>Lisa</h5>
-                                    <div className="d-flex justify-content-center ">
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                        <IoIosStar style={{ color: 'orange' }} />
-                                    </div>
-                                    <p className="blue-text">
-                                        Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                                        consectetur maxime debitis quam voluptatem aut consequatur
-                                        voluptatum.
-                                    </p>
-                                    <div className="d-flex justify-content-evenly w-75 stars align-items-center">
-                                    </div>
-                                </div>
-                            </Card>
-                        </SwiperSlide>
-                    </Swiper>
-                </section>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}  // Enables Swiper's default navigation buttons
+          modules={[Autoplay, Navigation]}  // Ensure you are using the Autoplay and Navigation modules
+        >
+          {feedbacks.map((feedback, index) => (
+            <SwiperSlide key={index}>
+              <Card className="w-100">
+                <div className="d-flex flex-column gap-1 justify-content-center align-items-center w-100">
+                  <img
+                    src={imageSrc}
+                    alt="reviews"
+                    className="w-50 h-50"
+                    style={{ borderRadius: "50%" }}
+                  />
+                  <h5>{feedback.name}</h5>
+                  <p className="blue-text">{feedback.comment}</p>
+                </div>
+              </Card>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
                 <Footer />
             </div>
         </>
