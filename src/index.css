@@ -27,13 +27,8 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  /* display: flex; */
-  place-items: center;
-  min-width: 320px;
-  padding: 0;
-  overflow-x: hidden;
-  min-height: 100vh;
+ 
+  
 }
 
 h1 {
@@ -77,5 +72,4 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
