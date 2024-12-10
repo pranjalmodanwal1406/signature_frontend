@@ -1,3 +1,8 @@
+.navbar a{
+  text-decoration: none !important;
+
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,9 +10,9 @@
   padding: 1rem 2rem;
   background-color: #fff;
   z-index: 1000;
-
+  
   &-logo img {
-    height: 3rem;
+    height: 4rem;
 
     @media (max-width: 420px) {
       height: 2.5rem; // Slightly smaller logo on very small screens
@@ -20,7 +25,7 @@
 
     .navbar-tab {
       position: relative;
-      margin: 0 1rem;
+      // margin: 0 1rem;
       padding: 0.5rem 1rem;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -94,7 +99,7 @@
       background-color: #3EB2F0;
       color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 50px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
@@ -173,5 +178,11 @@
       width: 100%;
       text-align: center;
     }
+  }
+}
+
+@media  screen and (max-width: 780px) {
+  .navbar{
+    flex-direction: row !important;
   }
 }

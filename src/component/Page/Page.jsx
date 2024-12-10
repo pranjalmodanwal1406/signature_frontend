@@ -1,124 +1,189 @@
-import React from 'react';
-import './Page.scss';
-import Page1 from './images/Page_1.png';
-import Page2 from './images/Page_2.png';
-import Page3 from './images/Page_3.png';
-import Page4 from './images/Page_4.png';
-import Page5 from './images/Page_5.png';
-import Page6 from './images/Page_6.png';
-import Page7 from './images/Page_7.png';
-import Page8 from './images/Page_8.png';
-import Page01 from './images/Page1.png';
+import React from "react";
+import "./Page.scss";
+import Page1 from "./images/Page_1.png";
+import Page2 from "./images/Page_2.png";
+import Page3 from "./images/Page_3.png";
+import Page4 from "./images/Page_4.png";
+import Page5 from "./images/Page_5.png";
+import Page6 from "./images/Page_6.png";
+import Page7 from "./images/Page_7.png";
+import Page8 from "./images/Page_8.png";
+import Page01 from "./images/Page1.png";
 // import Page02 from './images/Page2.png';
-import Slide1 from './images/Slide1.png';
-import Slide2 from './images/Slide2.png';
-import Slide3 from './images/Slide3.png';
+import Slide1 from "./images/Slide1.png";
+import Slide2 from "./images/Slide2.png";
+import Slide3 from "./images/Slide3.png";
 
-import Footer from '../Footer/Footer';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import Footer from "../Footer/Footer";
+import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const images = [
+  Page1,
+  Page2,
+  Page3,
+  Page4,
+  Page5,
+  Page6,
+  Page7,
+  Page8,
+  Page1,
+  Page2,
+  Page3,
+  Page4,
+  Page5,
+  Page6,
+  Page7,
+  Page8,
+];
+
+const chunkArray = (arr, size) => {
+  const chunks = [];
+  for (let i = 0; i < arr.length; i += size) {
+    chunks.push(arr.slice(i, i + size));
+  }
+  return chunks;
+};
 
 function Page() {
-  const images = [Page1, Page2, Page3, Page4, Page5, Page6, Page7, Page8];
-  const carouselImages = [Slide1, Slide2, Slide3];
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
+  const imageChunks = chunkArray(images, 8);
   return (
-    <div className='Page'>
-      <div className='Page1'>
-        {/* Section 1 */}
-        <div className="page_img_1">
-          <img src={Page01} alt="" />
-          <div className='page1_box'></div>
-          <div className='page1_content'>
-            <h1 className='page1_content_h1'>Templates</h1>
-            <p className='page1_p'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque harum distinctio sed cupiditate, consequatur laborum? Officia inventore dolore quidem iste.</p>
+    <>
+      <div className="Page">
+        <div className="Page1">
+          {/* Section 1 */}
+          <div className="landingpage_design">
+            <div className="ellipse55"></div>
+            <div className="ellipse62"></div>
+            <div className="ellipse59"></div>
+            <div className="ellipse72"></div>
+            <div className="ellipse60"></div>
+            <div className="ellipse61"></div>
+            <div className="ellipse56"></div>
+            <div className="ellipse57"></div>
+            <div className="ellipse64"></div>
+            <div className="ellipse58"></div>
+            <div className="ellipse71"></div>
+            <div className="ellipse63"></div>
+            <div className="group9079">
+              <div className="ellipse65"></div>
+              <div className="ellipse67"></div>
+              <div className="ellipse68"></div>
+              <div className="ellipse69"></div>
+              <div className="ellipse70"></div>
+            </div>
           </div>
-        </div>
+          <div className="page_img_1">
+            <img src={Page01} alt="" />
 
-        {/* Section 2 */}
-        <div className='Page2'>
-          <h3 className='category_h3'>Categories</h3>
-          <div className='main_carousel'>
-            <div id="carouselExampleIndicators" className="carousel slide">
-              <div className="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-              </div>
-              <div className="carousel-inner">
-                {[...Array(5)].map((_, pageIndex) => (
-                  <div className={`carousel-item ${pageIndex === 0 ? 'active' : ''}`} key={pageIndex}>
-                    <div className='carousel_page'>
-                      {images.map((image, index) => (
-                        <div className='card1' key={index}>
-                          <img src={image} className="w-40" alt="..." />
-                          <h3 className='page3_card1_h3'>lorem</h3>
-                        </div>
-                      ))}
+            <div className="page1_content">
+              <h1 className="page1_content_h1">Templates</h1>
+              <p className="page1_p">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+                harum distinctio sed cupiditate, consequatur laborum? Officia
+                inventore dolore quidem iste.
+              </p>
+            </div>
+          </div>
+
+          {/* Section 2 */}
+          <div className="container">
+            <div className="Page2">
+              <h3 className="category_h3">Categories</h3>
+              <Swiper
+                spaceBetween={10}
+                slidesPerView={1}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination, Navigation]}
+                className="swiper-templates1"
+                navigation={true}
+              >
+                {imageChunks.map((chunk, slideIndex) => (
+                  <SwiperSlide key={slideIndex}>
+                    <div className="carousel-inner">
+                      <div className="row gy-4">
+                        {chunk.map((image, index) => (
+                          <div className="col-lg-3" key={index}>
+                            <div className="card1">
+                              <img
+                                src={image}
+                                className="w-100 h-100"
+                                alt={`Image ${index}`}
+                              />
+                              <h3 className="page3_card1_h3">lorem</h3>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  </SwiperSlide>
                 ))}
-              </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+              </Swiper>
             </div>
           </div>
         </div>
 
         {/* Section 3 */}
-        <section className='Page3'>
-          <div className="page3-content">
-            <h3 className='page3_h3' style={{ color: '#3EB2F0' }}>Templates</h3>
-            <h1>A range of great designer <span>Templates</span></h1>
-            <p>For your easy access and editing, here we have templates built by designers</p>
-            <button className='page-button2'>
-              Show More
-            </button>
-          </div>
-          <div className="page_img_2">
-          <div id="carouselExample" class="carousel slide">
-                            <div class="carousel-inner" style={{ padding: '150px' }}>
-                                <div class="carousel-item active">
-                                    <img src={Slide1} class="d-block w-70" alt="..." />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src={Slide2} class="d-block w-70" alt="..." />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src={Slide3} class="d-block w-70" alt="..." />
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true" style={{ backgroundColor: '#3498db' }}></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
+        <section className="landingpage3 my-5">
+          <div className="container-fluid d-flex align-items-center">
+            <div className="landingpage3-content">
+              <h3 className="landingpage3_h3">Templates</h3>
+              <h1>
+                A range of great designer <span>Templates</span>
+              </h1>
+              <p className="landing_p3">
+                For your easy access and editing, here we have templates built
+                by designers
+              </p>
+              <button className="landingpage3-button2">Show More</button>
+            </div>
+            <div className="landingpage3_img_2">
+              <Swiper
+                spaceBetween={10}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 50,
+                  },
+                }}
+                modules={[Pagination, Navigation]}
+                className="swiper-templates"
+                navigation={true}
+              >
+                <SwiperSlide>
+                  <img src={Slide1} className="" alt="..." />
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <img src={Slide2} className="" alt="..." />
+                </SwiperSlide>
+                <SwiperSlide>
+                  {" "}
+                  <img src={Slide3} className="" alt="..." />
+                </SwiperSlide>
+              </Swiper>
+            </div>
           </div>
         </section>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

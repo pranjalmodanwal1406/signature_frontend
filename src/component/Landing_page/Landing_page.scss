@@ -1,3 +1,10 @@
+h3{
+  font-size: 20px !important;
+}
+
+.review-swiper{
+
+}
 .LandingPage {
   align-items: center;
 
@@ -20,7 +27,6 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        z-index: 1; // Place it behind other content
       }
 
       .landingpage_design div {
@@ -112,6 +118,8 @@
         flex: 1;
         padding-left: 2rem;
         text-align: left;
+        position: relative;
+        z-index: 1;
 
         .landingh5 {
           font-size: 1.2rem;
@@ -148,6 +156,7 @@
           .learnmore-button {
             background-color: #3498db;
             color: #fff;
+            border-radius: 10px;
           }
 
           .view_pricing {
@@ -161,6 +170,8 @@
       .home_img_1 {
         flex: 1;
         padding: 1rem;
+        display: flex;
+        justify-content: end;
 
         img {
           width: 80%;
@@ -173,12 +184,14 @@
       .section1 {
         flex-direction: column-reverse;
         align-items: center;
-        text-align: center;
+        text-align: start !important;
 
         .content {
           padding: 0.7rem;
           margin-bottom: 0.7rem;
-          text-align: center;
+          text-align: start !important;
+          position: absolute;
+          top: 0;
 
           .landingh5 {
             font-size: 0.9rem;
@@ -244,7 +257,7 @@
           .landingp {
             font-size: 0.5rem;
             width: 60%;
-            margin-left: 20%;
+            margin-left: 5% !important;
           }
 
           .buttons {
@@ -334,6 +347,11 @@
     .box-3 {
       border-right: 2px solid #3498db;
       padding: 2rem;
+      text-align: center;
+
+      .card{
+        max-width: 100%;
+      }
 
       h1 {
         color: #3498db;
@@ -346,18 +364,18 @@
     }
 
     .box-1 {
-      padding-right: 5rem;
-      padding-left: 5rem;
+      // padding-right: 5rem;
+      // padding-left: 5rem;
     }
 
     .box-2 {
-      padding-right: 10rem;
-      padding-left: 5rem;
+      // padding-right: 10rem;
+      // padding-left: 5rem;
     }
 
     .box-3 {
-      padding-right: 5rem;
-      padding-left: 5rem;
+      // padding-right: 5rem;
+      // padding-left: 5rem;
       border-right: none; // Remove border for the last box
     }
 
@@ -436,7 +454,7 @@
       }
 
       p {
-        font-size: 1.5em;
+        font-size: 1em;
         width: 80%;
         margin: 1rem auto;
         margin-left: 1%;
@@ -448,7 +466,7 @@
         border-radius: 15px;
         font-size: 1rem;
         padding: 10px 20px;
-        width: 50%;
+        // width: 50%;
         margin: 1rem auto;
       }
     }
@@ -466,6 +484,47 @@
           width: 80%;
           height: 80%;
         }
+      }
+
+      .swiper-templates .swiper-button-prev {
+        left: 80%;
+        top: 96%;
+        width:100px;
+        height:30px;
+        z-index: 999;
+      }
+      ::after{
+        color: black;
+        font-size:20px;
+        font-weight: bold;
+        
+      }
+      .swiper-templates .swiper-button-next {
+        left: 90%;
+        top: 96%;
+        width:100px;
+        height:30px;
+        z-index: 999;
+      }
+      ::after{
+        color: black;
+        font-size:20px;
+        font-weight: bold;
+        
+      }
+      .swiper-templates .swiper-pagination-bullet-active{
+        background-color: rgba(42, 191, 116, 1) !important;
+        border-radius: 0;
+        width: 10px;
+        height: 10px;
+       
+      }
+      .swiper-templates .swiper-pagination-bullet{
+        background-color: rgba(196, 196, 196, 1) ;
+        border-radius: 0;
+        width: 10px;
+        height: 10px;
+        
       }
     }
 
@@ -668,7 +727,7 @@
 
   // section 5
   .landingpage5 {
-    margin-bottom: 20vh;
+    margin-bottom: 30px;
     margin-left: 10%;
 
     .h16 {
@@ -788,7 +847,7 @@
   // border: 2px solid black;
   padding: 40px 30px;
   color: black;
-  flex: 0 0 30%;
+  max-width: 100%;
   margin: 40px 0;
   box-shadow: 11px 0px 18px rgba(0, 0, 0, 0.3);
   /* Adds a shadow */
@@ -820,7 +879,7 @@
 }
 
 .reviews .swiper-button-prev {
-  left: 16px;
+  left: 53px;
 }
 
 .reviews .swiper-button-next {
