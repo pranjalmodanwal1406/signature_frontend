@@ -4,7 +4,8 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function BlogDetail() {
-  const [data, setData] = useState(null); // Initialize as null for clarity
+  const [data, setData] = useState(null);
+  const [relatedData, setRelatedData] = useState([]);
   const { id } = useParams();
   const [extraImage, setExtraImage] = useState([]);
   const [showExtraImages, setShowExtraImages] = useState(false);
@@ -22,7 +23,6 @@ export default function BlogDetail() {
       const response = await axios.get(
         `http://44.196.64.110:9006/api/blog/getBlog/${id}`
       );
-      console.log(response.data);
 
       const blogData = response?.data;
       setData(blogData);
@@ -35,9 +35,25 @@ export default function BlogDetail() {
     }
   };
 
+  const getAllRelatedData = async () => {
+    try {
+      const response = await axios.get(
+        `http://44.196.64.110:9006/api/blog/getBlog`
+      );
+      const blogData = response?.data?.data;
+      console.log("blogData", blogData);
+
+      const filterData = blogData.filter((item) => item._id !== id);
+      setRelatedData(filterData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   useEffect(() => {
     if (id) {
       getAllData();
+      getAllRelatedData();
     }
   }, [id]);
 
@@ -63,8 +79,11 @@ export default function BlogDetail() {
     );
   }
 
+  console.log("relatedData", relatedData);
+  console.log("data", data);
+
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="blog my-4">
         <section className="py-4">
           <div className="container-fluid">
@@ -74,8 +93,8 @@ export default function BlogDetail() {
               </Breadcrumb>
               <h1 className="text-start fs-3 mb-3">{data?.title}</h1>
               <div className="row gy-4">
-                <div className="col-12">
-                  <div className="row justify-content-start gy-4 align-items-start">
+                <div className="col-lg-9">
+                  <div className="row justify-content-start gy-4 ">
                     {data?.images?.map((image, index) => (
                       <React.Fragment key={index}>
                         {index === 0 ? (
@@ -84,7 +103,6 @@ export default function BlogDetail() {
                               src={image}
                               alt="Welcome to AirOutdoors"
                               className="img-fluid w-100 h-100"
-                              style={{ maxHeight: "500px" }}
                             />
                           </div>
                         ) : (
@@ -129,6 +147,37 @@ export default function BlogDetail() {
                       </div>
                     )}
                   </div>
+                  <div className="card shadow-lg rounded-5 w-100 mw-100 text-start mt-5">
+                    <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-2 mb-4">
+                      <span>
+                        <b>Author:</b> {data?.author}
+                      </span>
+                      <span>
+                        <b>Date:</b> {new Date(data?.date).toLocaleDateString()}
+                      </span>
+                    </div>
+                    <div
+                      className=""
+                      dangerouslySetInnerHTML={{ __html: data?.content }}
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-3">
+                  <div className="d-flex flex-column gap-3 align-items-start related-blogs">
+                    <h2>Related Blogs</h2>
+                    {relatedData.map((item) => (
+                      <>
+                        <div key={item._id} className="w-100">
+                          <Link
+                            to={`/blog/${item._id}`}
+                            className="text-decoration-none text-dark"
+                          >
+                            {item.title}
+                          </Link>
+                        </div>
+                      </>
+                    ))}
+                  </div>
                 </div>
                 {showExtraImages && extraImage.length > 0 && (
                   <>
@@ -163,18 +212,6 @@ export default function BlogDetail() {
                   </>
                 )}
               </div>
-              <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-2 mb-4">
-                <span>
-                  <b>Author:</b> {data?.author}
-                </span>
-                <span>
-                  <b>Date:</b> {new Date(data?.date).toLocaleString()}
-                </span>
-              </div>
-              <div
-                className=""
-                dangerouslySetInnerHTML={{ __html: data?.content }}
-              />
             </div>
           </div>
         </section>

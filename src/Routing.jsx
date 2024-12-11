@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './component/Navbar/Navbar';
+import Header from './component/Navbar/Navbar';
 import Home from './component/home/Home';
 import About from './component/About/About';
 import Page from './component/Page/Page';
@@ -8,13 +8,10 @@ import Pricing from './component/Pricing/Pricing';
 import Industry from './component/Industry/Industry';
 import Profession from './component/Profession/Profession';
 import Guide from './component/Guide/Guide';
-import Card from './component/Card/Card';
 import Blog from './component/Blog/Blog';
-import Blog_specification from './component/Blog_specification/Blog_specification';
 import Product_updates from './component/Product_updates/Product_updates';
 import Contact from './component/Contact/Contact';
 import Legal from './component/Legal/Legal';
-import Footer from './component/Footer/Footer';
 import Feedback from "./component/Feedback/Feedback";
 
 // auth pages
@@ -31,23 +28,23 @@ function App() {
   return (
     <Router>
       {/* <ScrollToTop />  */}
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Landing_page/>} />
         <Route path="/Landing_page" element={<Landing_page />} />
         <Route path="/Page" element={<Page />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/About" element={<About />} />
-        <Route path="/Card" element={<Card />} />
+       
         <Route path="/Industry" element={<Industry />} />
         <Route path="/Profession" element={<Profession />} />
         <Route path="/Guide" element={<Guide />} />
         <Route path="/Blog" element={<Blog />} />
-        <Route path="/Blog_specification" element={<Blog_specification />} />
+      
         <Route path="/Product_updates" element={<Product_updates />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legal" element={<Legal />} />
-        <Route path="/Footer" element={<Footer />} /> 
+       
         <Route path="/feedback" element={<Feedback />} />   
         <Route path="/Blog/:id" element={<BlogDetail />} />  
           
