@@ -66,8 +66,8 @@ export default function BlogDetail() {
   if (!data) {
     return (
       <div className="container">
-        <div className="blog my-4">
-          <section className="py-4">
+        <div className="blog my-5">
+          <section className="py-5">
             <div className="container-fluid">
               <div className="d-flex justify-content-center align-items-center">
                 <span>Data Loading...</span>
@@ -92,7 +92,7 @@ export default function BlogDetail() {
                 <Breadcrumb.Item active>{data?.title}</Breadcrumb.Item>
               </Breadcrumb>
               <h1 className="text-start fs-3 mb-3">{data?.title}</h1>
-              <div className="row gy-4">
+              <div className="row gy-5">
                 <div className="col-lg-9">
                   <div className="row justify-content-start gy-4 ">
                     {data?.images?.map((image, index) => (

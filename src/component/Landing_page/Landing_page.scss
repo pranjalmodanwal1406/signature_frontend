@@ -190,28 +190,29 @@ h3{
           padding: 0.7rem;
           margin-bottom: 0.7rem;
           text-align: start !important;
-          position: absolute;
+          position: relative;
           top: 0;
 
           .landingh5 {
-            font-size: 0.9rem;
+           
             color: #3498db;
             font-weight: 600;
           }
 
           .landingh1 {
-            font-size: 1.2rem;
+            font-size: 1rem !important;
           }
 
           .landingp {
-            font-size: 0.6rem;
-            width: 40%;
+            font-size: 0.8rem !important;
+            width: 100% !important;
             padding-left: 2%;
             padding-right: 2%;
+            margin-left: 0 !important;
           }
 
           .buttons {
-            flex-direction: column;
+            flex-direction: row !important;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -221,7 +222,7 @@ h3{
             .view_pricing {
               width: 40%;
               margin-bottom: 0.5rem;
-              margin-left: 4rem;
+              // margin-left: 4rem;
             }
           }
         }
@@ -257,12 +258,13 @@ h3{
           .landingp {
             font-size: 0.5rem;
             width: 60%;
-            margin-left: 5% !important;
+            // margin-left: 5% !important;
           }
 
           .buttons {
             flex-direction: column;
-            margin-left: 20%;
+            margin-left: 0;
+            padding-right: 0;
 
             .learnmore-button,
             .view_pricing {
@@ -280,7 +282,7 @@ h3{
           padding: 1rem;
 
           img {
-            width: 60%;
+            width: 100% !important;
             height: auto;
           }
         }
@@ -530,7 +532,7 @@ h3{
 
     @media (max-width: 768px) {
       .landingpage3-content {
-        width: 80%;
+        width: 100% !important;
         margin-left: 0;
         text-align: center;
 
@@ -544,8 +546,8 @@ h3{
         }
       }
 
-      .landingpage3_img_2 {
-        width: 50%;
+      .landingpage3_img_2  , .landingpage3_img_2 img{
+        width: 100% !important;
         // width: auto;
 
         .slick-slider {
@@ -676,6 +678,9 @@ h3{
   // Media Queries for different screen sizes
 
   @media (max-width: 1200px) {
+    .landingpage4 {
+      padding-left: 0;
+    }
     .landingpage4-head {
       font-size: 2.2rem;
     }
@@ -803,6 +808,8 @@ h3{
         padding: 1em 0;
         overflow: hidden;
       }
+        // section 5
+
 
       .carousel-item {
         display: block;
@@ -837,7 +844,28 @@ h3{
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .LandingPage .landingpage3 .landingpage3_img_2 .swiper-templates .swiper-button-prev {
+    left: 0px;
+    top: 50%;
+    width: 100px;
+    height: 30px;
+    z-index: 999;
+}
+.LandingPage .landingpage3 .landingpage3_img_2 .swiper-templates .swiper-button-next {
+  right: 0px;
+  left: 70%;
+  top: 50%;
+  width: 100px;
+  height: 30px;
+  z-index: 999;
+}
+  .landingpage5 {
+  
+    margin-left: 0% !important;
+  }
+ 
+}
 
 
 // feedback section

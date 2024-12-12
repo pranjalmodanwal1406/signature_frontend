@@ -56,11 +56,11 @@ function Industry() {
         {/* Section 2 */}
         <div className="container">
           <div className="AlternatingSections">
-            <div className="row gy-4 align-items-center">
-              <div className="col-lg-6">
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+              <div className="col-lg-6 order-2 order-lg-1">
                 <img src={Industry1} alt="Industry 1" className="w-100" />
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <h2>Education</h2>
                 <p>
                   Content for the first section. Lorem ipsum dolor sit amet,
@@ -73,7 +73,10 @@ function Industry() {
                 </ul>
                 <button className="Industry_button">Get Started</button>
               </div>
-              <div className="col-lg-6">
+             
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6  ">
                 <h2>SaaS</h2>
                 <p>
                   Content for the second section. Lorem ipsum dolor sit amet,
@@ -86,13 +89,16 @@ function Industry() {
                 </ul>
                 <button className="Industry_button">Get Started</button>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 ">
                 <img src={Industry2} alt="Industry 2" className="w-100" />
               </div>
-              <div className="col-lg-6">
+            
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6 order-2 order-lg-1">
                 <img src={Industry3} alt="Industry 3" className="w-100" />
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <h2>IT & Infra</h2>
                 <p>
                   Content for the third section. Lorem ipsum dolor sit amet,
@@ -105,7 +111,10 @@ function Industry() {
                 </ul>
                 <button className="Industry_button">Get Started</button>
               </div>
-              <div className="col-lg-6">
+             
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6">
                 <h2>Creative Field</h2>
                 <p>
                   Content for the fourth section. Lorem ipsum dolor sit amet,

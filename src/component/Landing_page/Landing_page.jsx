@@ -16,6 +16,7 @@ import Footer from "../Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "swiper/css";
+import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { IoIosStar } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -235,7 +236,7 @@ function LandingPage() {
 
         {/* section 3 */}
         <section className="landingpage3 my-5">
-          <div className="container-fluid d-flex align-items-center">
+          <div className="container-fluid d-flex align-items-center flex-wrap">
             <div className="landingpage3-content">
               <h3 className="landingpage3_h3">Templates</h3>
               <h1>
@@ -245,7 +246,9 @@ function LandingPage() {
                 For your easy access and editing, here we have templates built
                 by designers
               </p>
-              <button className="landingpage3-button2">Show More</button>
+              <button className="landingpage3-button2">
+                <Link to="/Page" className="text-decoration-none text-light">Show More</Link>
+              </button>
             </div>
             <div className="landingpage3_img_2">
               <Swiper
@@ -323,8 +326,7 @@ function LandingPage() {
             <br /> Something <span style={{ color: "#3EB2F0" }}>About Us</span>
           </h1>
           <Swiper
-         
-          
+            pagination={true}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,

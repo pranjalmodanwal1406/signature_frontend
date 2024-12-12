@@ -93,44 +93,72 @@ function Page() {
           <div className="container">
             <div className="Page2">
               <h3 className="category_h3">Categories</h3>
-              <Swiper
-                spaceBetween={10}
-                slidesPerView={1}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[Pagination, Navigation]}
-                className="swiper-templates1"
-                navigation={true}
-              >
-                {imageChunks.map((chunk, slideIndex) => (
-                  <SwiperSlide key={slideIndex}>
-                    <div className="carousel-inner">
-                      <div className="row gy-4">
-                        {chunk.map((image, index) => (
-                          <div className="col-lg-3" key={index}>
-                            <div className="card1">
-                              <img
-                                src={image}
-                                className="w-100 h-100"
-                                alt={`Image ${index}`}
-                              />
-                              <h3 className="page3_card1_h3">lorem</h3>
+              <div className="d-none d-lg-block">
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination, Navigation]}
+                  className="swiper-templates1"
+                  navigation={true}
+                >
+                  {imageChunks.map((chunk, slideIndex) => (
+                    <SwiperSlide key={slideIndex}>
+                      <div className="carousel-inner">
+                        <div className="row gy-4">
+                          {chunk.map((image, index) => (
+                            <div className="col-lg-3" key={index}>
+                              <div className="card1">
+                                <img
+                                  src={image}
+                                  className="w-100 h-100"
+                                  alt={`Image ${index}`}
+                                />
+                                <h3 className="page3_card1_h3">lorem</h3>
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+
+              <div className="d-block d-lg-none">
+                <Swiper
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination, Navigation]}
+                  className="swiper-templates1"
+                  navigation={true}
+                >
+                  {images.map((image, index) => (
+                    <SwiperSlide key={index} className="mb-4">
+                      <div className="card1">
+                        <img
+                          src={image}
+                          className="w-100 h-100"
+                          alt={`Image ${index}`}
+                        />
+                        <h3 className="page3_card1_h3 text-center">lorem</h3>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Section 3 */}
         <section className="landingpage3 my-5">
-          <div className="container-fluid d-flex align-items-center">
+          <div className="container-fluid d-flex align-items-center flex-wrap">
             <div className="landingpage3-content">
               <h3 className="landingpage3_h3">Templates</h3>
               <h1>

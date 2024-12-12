@@ -90,29 +90,29 @@ function Guide() {
 
         {/* Section 2 */}
         <div className="container">
-          <div className="row gy-4">
-            <div className="col-lg-3">
+          <div className="row gy-4 ">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide1} alt="Random 1" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide2} alt="Random 2" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide3} alt="Random 3" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide4} alt="Random 4" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide5} alt="Random 5" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide6} alt="Random 6" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide7} alt="Random 7" />
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
               <img src={Guide1} alt="Random 8" />
             </div>
           </div>
@@ -160,7 +160,7 @@ function Guide() {
                     </div>
                   </>
                 ))}
-                <div className="card-buttons flex-row justify-content-center my-5">
+                <div className="card-buttons flex-column flex-lg-row justify-content-center my-5">
                   <button className="button button-create">
                     Create Signature
                   </button>

@@ -45,7 +45,7 @@ function Profession() {
         {/* Section 2 */}
         <div className="AlternatingSections">
           <div className="container">
-            <div className="row gy-4 align-items-center">
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
               <div className="col-lg-6">
                 <img
                   src={Profession1}
@@ -67,7 +67,9 @@ function Profession() {
                   <li>Item 3</li>
                 </ul>
               </div>
-              <div className="col-lg-6">
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+              <div className="col-lg-6 order-2 order-lg-1 ">
                 <h2 className="section2_h2">Doctors</h2>
                 <p>
                   Content for the second section. Lorem ipsum dolor sit amet,
@@ -79,9 +81,11 @@ function Profession() {
                   <li>Item 3</li>
                 </ul>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <img src={Profession2} alt="Doctors" className="w-100" />
               </div>
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
               <div className="col-lg-6">
                 <img src={Profession4} alt="Lawyers" className="w-100" />
               </div>
@@ -97,7 +101,9 @@ function Profession() {
                   <li>Item 3</li>
                 </ul>
               </div>
-              <div className="col-lg-6">
+            </div>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+              <div className="col-lg-6 order-2 order-lg-1">
                 <h2 className="section2_h2">
                   Professional <br /> Dancers
                 </h2>
@@ -111,7 +117,7 @@ function Profession() {
                   <li>Item 3</li>
                 </ul>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 order-1 order-lg-2">
                 <img
                   src={Profession4}
                   alt="Professional Dancers"

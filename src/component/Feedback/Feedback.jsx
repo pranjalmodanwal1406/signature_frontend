@@ -65,7 +65,7 @@ const Form = () => {
           </div>
           <div className="form-group">
             <label htmlFor="comments">Comment</label>
-            <textarea id="comments" placeholder="Enter Detailed Comment" name="comment" value={userData.comment}
+            <textarea rows="4" id="comments" placeholder="Enter Detailed Comment" name="comment" value={userData.comment}
               onChange={handleChange}></textarea>
           </div>
           <div className="feedback-btn">

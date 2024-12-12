@@ -63,14 +63,14 @@ function About() {
                 we recommend you to subscribe to our newsletter, drop <br></br>{" "}
                 your email below to get daily updat eabout us{" "}
               </p>
-              <div className="d-flex flex-row gap-3 align-items-center justify-content-center">
+              <div className="d-flex flex-column flex-lg-row gap-3 align-items-center justify-content-center">
                 <Form.Control
                   required
                   type="text"
                   className="rounded-5 bg-second-subs ps-5 py-3 h-100 fs-6"
                   placeholder="Enter your email address"
                 />
-                <button className="about-button3 px-5 py-3 mt-0">Subscribe</button>
+                <button className="about-button3 px-5 py-lg-3 py-2 mt-0">Subscribe</button>
               </div>
             </div>
           </div>

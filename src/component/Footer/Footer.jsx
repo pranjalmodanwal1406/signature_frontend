@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-8 mb-4 mb-lg-0">
               <img src={vector} alt="Logo" className="footer-logo mb-3" />
-             
+
               <address>
                 <br />
                 Call:+123 456 789
@@ -54,19 +54,19 @@ const Footer = () => {
               <h5>Explore</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="/about">About Us</a>
+                  <Link to="/About">About Us</Link>
                 </li>
                 <li>
-                  <a href=".196.192.232:2001">Templates</a>
+                  <Link to="/Page">Templates</Link>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <Link to="/Blog">Blog</Link>
                 </li>
                 <li>
-                  <a href="/services">Contact</a>
+                  <Link to="/Contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -74,22 +74,22 @@ const Footer = () => {
               <h5>Categories</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="/appDev-service">Resume</a>
+                  <Link to="/">Resume</Link>
                 </li>
                 <li>
-                  <a href="/web-service">PHD</a>
+                  <Link to="/">PHD</Link>
                 </li>
                 <li>
-                  <a href="/software-service">Business</a>
+                  <Link to="/">Business</Link>
                 </li>
                 <li>
-                  <a href="/game-service">Designer</a>
+                  <Link to="/">Designer</Link>
                 </li>
                 <li>
-                  <a href="/design-service">Photography</a>
+                  <Link to="/">Photography</Link>
                 </li>
                 <li>
-                  <a href="/iot-service">Music</a>
+                  <Link to="/">Music</Link>
                 </li>
               </ul>
             </div>

@@ -22,7 +22,7 @@ const Blog = () => {
   // State to hold blog data
   const [blogData, setBlogData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [visiblePosts, setVisiblePosts] = useState(9); // Initially show 9 posts
+  const [visiblePosts, setVisiblePosts] = useState(8); // Start with 9 visible posts
 
   useEffect(() => {
     // Fetch the blog data from the API
@@ -188,7 +188,7 @@ const Blog = () => {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   officia deserunt nemo laboriosam quo!
                 </div>
-                <a href="#" className="view-post-link1">
+                <a href="#" className="view-post-link1 mt-3">
                   View Post
                 </a>
               </div>

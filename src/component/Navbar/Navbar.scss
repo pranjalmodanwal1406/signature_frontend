@@ -2,7 +2,29 @@
   text-decoration: none !important;
 
 }
-
+.navbar-toggler{
+  border: 0 !important;
+}
+.navbar-toggler:focus {
+ 
+  box-shadow: none !important;
+}
+.hover-effect a{
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-nav .dropdown-menu {
+ border: 0;
+ background-color: #3EB2F0 !important;
+}
+.dropdown-item{
+  border: 0;
+  background-color: #3EB2F0 !important;
+ }
+ .dropdown-item span {
+  color: #fff !important;
+  padding: 8px 12px;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
