@@ -65,7 +65,9 @@ const Header = () => {
                       <h3>By Industry</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Education Facilities</Link>
+                          <Link to="/Product_updates">
+                            Education Facilities
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Real Estate Agent</Link>
@@ -97,22 +99,32 @@ const Header = () => {
                       <h3>Get inspired</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Email Signature examples</Link>
+                          <Link to="/Product_updates">
+                            Email Signature examples
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Email Signature Templates</Link>
+                          <Link to="/Product_updates">
+                            Email Signature Templates
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Email Signature Design</Link>
+                          <Link to="/Product_updates">
+                            Email Signature Design
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Email Sign Off</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Email Signature Banner</Link>
+                          <Link to="/Product_updates">
+                            Email Signature Banner
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Handwriteen Signatures</Link>
+                          <Link to="/Product_updates">
+                            Handwriteen Signatures
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -123,10 +135,14 @@ const Header = () => {
                           <Link to="/Product_updates">Disclaimer Template</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Cool Signature Templates</Link>
+                          <Link to="/Product_updates">
+                            Cool Signature Templates
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Minimalist Templates</Link>
+                          <Link to="/Product_updates">
+                            Minimalist Templates
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Animated Templates</Link>
@@ -140,10 +156,14 @@ const Header = () => {
                       <h3>Tools</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Email Signature generator</Link>
+                          <Link to="/Product_updates">
+                            Email Signature generator
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Email Signature manager</Link>
+                          <Link to="/Product_updates">
+                            Email Signature manager
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Signature generator</Link>
@@ -152,7 +172,9 @@ const Header = () => {
                           <Link to="/Product_updates">Banner Maker</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Email discliamer generator</Link>
+                          <Link to="/Product_updates">
+                            Email discliamer generator
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -167,7 +189,9 @@ const Header = () => {
                       <h3>Guide</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">How to add signature in outlook</Link>
+                          <Link to="/Product_updates">
+                            How to add signature in outlook
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Add Signature</Link>
@@ -181,10 +205,14 @@ const Header = () => {
                       <h3>Blogs</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Email Marketing Updates</Link>
+                          <Link to="/Product_updates">
+                            Email Marketing Updates
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Digital Marketing Updates</Link>
+                          <Link to="/Product_updates">
+                            Digital Marketing Updates
+                          </Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Tech & IT</Link>
@@ -220,6 +248,9 @@ const Header = () => {
                         </li>
                         <li>
                           <Link to="/About">About Us</Link>
+                        </li>
+                        <li>
+                          <Link to="/feedback">Feedback</Link>
                         </li>
                         <li>
                           <Link to="/Product_updates">Career</Link>
@@ -318,10 +349,14 @@ const Header = () => {
 
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Email Signature examples</Link>
+                      <Link to="/Product_updates">
+                        Email Signature examples
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Email Signature Templates</Link>
+                      <Link to="/Product_updates">
+                        Email Signature Templates
+                      </Link>
                     </li>
                     <li>
                       <Link to="/Product_updates">Email Signature Design</Link>
@@ -341,7 +376,9 @@ const Header = () => {
                   <span>Tools</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Email Signature generator</Link>
+                      <Link to="/Product_updates">
+                        Email Signature generator
+                      </Link>
                     </li>
                     <li>
                       <Link to="/Product_updates">Email Signature manager</Link>
@@ -353,7 +390,9 @@ const Header = () => {
                       <Link to="/Product_updates">Banner Maker</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Email discliamer generator</Link>
+                      <Link to="/Product_updates">
+                        Email discliamer generator
+                      </Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
@@ -363,7 +402,9 @@ const Header = () => {
                   <span>Guides</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">How to add signature in outlook</Link>
+                      <Link to="/Product_updates">
+                        How to add signature in outlook
+                      </Link>
                     </li>
                     <li>
                       <Link to="/Product_updates">Add Signature</Link>
@@ -380,7 +421,9 @@ const Header = () => {
                       <Link to="/Product_updates">Email Marketing Updates</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Digital Marketing Updates</Link>
+                      <Link to="/Product_updates">
+                        Digital Marketing Updates
+                      </Link>
                     </li>
                     <li>
                       <Link to="/Product_updates">Tech & IT</Link>
@@ -413,6 +456,9 @@ const Header = () => {
                       <Link to="/About">About Us</Link>
                     </li>
                     <li>
+                      <Link to="/feedback">Feedback</Link>
+                    </li>
+                    <li>
                       <Link to="/Product_updates">Career</Link>
                     </li>
                   </ul>
@@ -434,10 +480,7 @@ const Header = () => {
               </NavDropdown>
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <div className="navbar-right d-flex">
-                <Link
-                  to="/signup"
-                  className="btn signup-button w-100"
-                >
+                <Link to="/signup" className="btn signup-button w-100">
                   Sign Up
                 </Link>
               </div>
