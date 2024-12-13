@@ -24,6 +24,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import user1 from "./image/user.png";
+import axios from "axios";
 
 function PrevArrow(props) {
   const { className, onClick } = props;
@@ -131,7 +132,22 @@ function LandingPage() {
   const [templates, setTemplates] = useState(1000);
   const [enterprises, setEnterprises] = useState(200);
   const [categories, setCategories] = useState(99);
+  const [feedbackData, setFeedbackData] = useState([]);
 
+  const fetchFeedbackData = async () => {
+    try {
+      const response = await axios.get(
+        "http://44.196.64.110:9006/api/feedback"
+      );
+      setFeedbackData(response?.data?.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchFeedbackData();
+  }, [feedbackData]);
   const animateValue = (setter, start, end, duration) => {
     const range = end - start;
     const stepTime = Math.abs(Math.floor(duration / range));
@@ -152,6 +168,9 @@ function LandingPage() {
     animateValue(setEnterprises, 50, 200, 1500); // 2 seconds for 200
     animateValue(setCategories, 50, 99, 1000); // 2 seconds for 99
   }, []);
+
+  console.log(feedbackData);
+  
 
   return (
     <>
@@ -247,7 +266,9 @@ function LandingPage() {
                 by designers
               </p>
               <button className="landingpage3-button2">
-                <Link to="/Page" className="text-decoration-none text-light">Show More</Link>
+                <Link to="/Page" className="text-decoration-none text-light">
+                  Show More
+                </Link>
               </button>
             </div>
             <div className="landingpage3_img_2">
@@ -350,98 +371,22 @@ function LandingPage() {
             }}
             modules={[Autoplay, Pagination, Navigation]}
           >
-            <SwiperSlide>
-              <Card className="w-100">
-                <div className="d-flex justify-content-start ">
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                </div>
-                <p className="fs-6 mt-3 text-start ">
-                  Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                  consectetur maxime debitis quam voluptatem aut consequatur
-                  voluptatum.
-                </p>
-                <div className="d-flex flex-row gap-1 justify-content-start align-items-center w-100 mt-3">
-                  <img src={user1} alt="reviews" />
-                  <div className="">
-                    <h5 className="text-start mb-0">Lisa</h5>
-                    <h5 className="text-muted fs-6">UX Designer </h5>
+            {feedbackData?.map((item, index) => (
+              <>
+                <SwiperSlide key={index}>
+                <Card className="w-100">
+                  <p className="fs-6 mt-3 text-start ">{item.comment}</p>
+                  <div className="d-flex flex-row gap-1 justify-content-start align-items-center w-100 mt-3">
+                    <img src={user1} alt="reviews" />
+                    <div className="">
+                      <h5 className="text-start mb-0">{item.name}</h5>
+                      <h5 className="text-muted fs-6">{item.email} </h5>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-100">
-                <div className="d-flex justify-content-start ">
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                </div>
-                <p className="fs-6 mt-3 text-start ">
-                  Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                  consectetur maxime debitis quam voluptatem aut consequatur
-                  voluptatum.
-                </p>
-                <div className="d-flex flex-row gap-1 justify-content-start align-items-center w-100 mt-3">
-                  <img src={user1} alt="reviews" />
-                  <div className="">
-                    <h5 className="text-start mb-0">Lisa</h5>
-                    <h5 className="text-muted fs-6">UX Designer </h5>
-                  </div>
-                </div>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-100">
-                <div className="d-flex justify-content-start ">
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                </div>
-                <p className="fs-6 mt-3 text-start ">
-                  Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                  consectetur maxime debitis quam voluptatem aut consequatur
-                  voluptatum.
-                </p>
-                <div className="d-flex flex-row gap-1 justify-content-start align-items-center w-100 mt-3">
-                  <img src={user1} alt="reviews" />
-                  <div className="">
-                    <h5 className="text-start mb-0">Lisa</h5>
-                    <h5 className="text-muted fs-6">UX Designer </h5>
-                  </div>
-                </div>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-100">
-                <div className="d-flex justify-content-start ">
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                  <IoIosStar style={{ color: "orange" }} />
-                </div>
-                <p className="fs-6 mt-3 text-start ">
-                  Sapiente occaecati exercitationem quasi eum corporis sit. Aut
-                  consectetur maxime debitis quam voluptatem aut consequatur
-                  voluptatum.
-                </p>
-                <div className="d-flex flex-row gap-1 justify-content-start align-items-center w-100 mt-3">
-                  <img src={user1} alt="reviews" />
-                  <div className="">
-                    <h5 className="text-start mb-0">Lisa</h5>
-                    <h5 className="text-muted fs-6">UX Designer </h5>
-                  </div>
-                </div>
-              </Card>
-            </SwiperSlide>
+                </Card>
+                </SwiperSlide>
+              </>
+            ))}
           </Swiper>
         </section>
         <Footer />
