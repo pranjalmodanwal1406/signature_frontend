@@ -1,7 +1,7 @@
 .Pricing {
     .Pricing_section1_content {
         text-align: center;
-        padding: 2rem;
+        padding: 8rem 0 8rem 0;
 
         .Pricing_h4 {
             color: #3EB2F0;
@@ -239,4 +239,14 @@
               }
             }
           }
+}
+.mw-100{
+  max-width: 100%;
+}
+.pricing .swiper-button-prev::after, .pricing .swiper-button-next::after {
+  font-size: 20px;
+  padding: 15px 20px;
+  background-color: #000;
+  border-radius: 50%;
+  color: white;
 }

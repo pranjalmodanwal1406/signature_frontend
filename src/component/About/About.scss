@@ -4,12 +4,14 @@
 .about {
   font-family: 'Poppins', sans-serif;
 }
-
+.bg-second-subs{
+  background-color: rgba(242, 241, 241, 1);
+}
 .about1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7rem 2rem; /* Default padding */
+  padding: 3rem 0 5rem 0; /* Default padding */
 }
 
 .left {
@@ -126,5 +128,10 @@
 
   .about3 {
     padding: 2rem 1rem; /* Adjusted padding for extra small screens */
+  }
+}
+@media (min-width: 768px) {
+  .w-lg-75{
+    width: 85% !important;
   }
 }

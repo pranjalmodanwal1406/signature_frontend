@@ -1,12 +1,12 @@
 import React from "react";
 import "./Guide.scss";
-import Guide1 from './images/Guide_1.png';
-import Guide2 from './images/Guide_2.png';
-import Guide3 from './images/Guide_3.png';
-import Guide4 from './images/Guide_4.png';
-import Guide5 from './images/Guide_5.png';
-import Guide6 from './images/Guide_6.png';
-import Guide7 from './images/Guide_7.png';
+import Guide1 from "./images/Guide_1.png";
+import Guide2 from "./images/Guide_2.png";
+import Guide3 from "./images/Guide_3.png";
+import Guide4 from "./images/Guide_4.png";
+import Guide5 from "./images/Guide_5.png";
+import Guide6 from "./images/Guide_6.png";
+import Guide7 from "./images/Guide_7.png";
 import Footer from "../Footer/Footer";
 
 function Guide() {
@@ -58,7 +58,7 @@ function Guide() {
     <>
       <div className="Guide">
         {/* Section 1 */}
-        <div className="Guide_section1_content">
+        <div className="Guide_section1_content overflow-hidden">
           <h4 className="Guide_h4">GUIDE</h4>
           <h1 className="Guide_h1">Email Signature Guide</h1>
           <h6 className="Guide_content">
@@ -74,7 +74,7 @@ function Guide() {
             <div className="ellipse61"></div>
             <div className="ellipse56"></div>
             <div className="ellipse57"></div>
-            <div className="ellipse64"></div> 
+            <div className="ellipse64"></div>
             <div className="ellipse58"></div>
             <div className="ellipse71"></div>
             <div className="ellipse63"></div>
@@ -86,87 +86,88 @@ function Guide() {
               <div className="ellipse70"></div>
             </div>
           </div>
-         
         </div>
 
-        
-
         {/* Section 2 */}
-        <div className="Guide_section2">
-          <div className="image-grid">
-            <div className="row">
-              <img
-                src={Guide1}
-                alt="Random 1"
-              />
-              <img
-                src={Guide2}
-                alt="Random 2"
-              />
-              <img
-                src={Guide3}
-                alt="Random 3"
-              />
-              <img
-                src={Guide4}
-                alt="Random 4"
-              />
+        <div className="container">
+          <div className="row gy-4 ">
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide1} alt="Random 1" />
             </div>
-            <div className="row">
-              <img
-                src={Guide5}
-                alt="Random 5"
-              />
-              <img
-                src={Guide6}
-                alt="Random 6"
-              />
-              <img
-                src={Guide7}
-                alt="Random 7"
-              />
-              <img
-                src={Guide1}
-                alt="Random 8"
-              />
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide2} alt="Random 2" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide3} alt="Random 3" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide4} alt="Random 4" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide5} alt="Random 5" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide6} alt="Random 6" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide7} alt="Random 7" />
+            </div>
+            <div className="col-lg-3 d-flex justify-content-center align-items-center">
+              <img src={Guide1} alt="Random 8" />
             </div>
           </div>
         </div>
 
         {/* Section 3 */}
-        <div className="Guide_section3">
-          <p className="section3_p">How to create a email Signature by professional and team</p>
+        <div className="">
+          <p className="section3_p">
+            How to create a email Signature by professional and team
+          </p>
 
           <div className="section3_main_content">
             <div className="section3_content_1">
               <h3>
-                <span>E-mail Signature</span> <br /> How to create{" "}
+                <span>E-mail Signature</span>
               </h3>
-              <p className="Guide_para">
+              <h5>How to create</h5>
+              <p className="Guide_para text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                 tempore quaerat beatae aliquid error vero doloremque ratione,{" "}
-                <br />
+              
                 recusandae eum suscipit explicabo minus rem voluptatem quisquam
                 id consectetur numquam veritatis assumenda possimus.
-                <br />
+              
                 cumque Eum tempore explicabo, a aliquid, pariatur iusto
                 praesentium nesciunt illum porro sit distinctio <br />
                 cumqueducimus labore, eius perferendis incidunt.
               </p>
             </div>
-            <div className="card-section">
-              {cards.map((card) => (
-                <div className="card" key={card.id}>
-                  <div className="card-image">
-                    <img src={card.image} alt={card.title} />
-                  </div>
-                  <h2 className="card-title">{card.title}</h2>
-                  <p className="card-content" dangerouslySetInnerHTML={{ __html: card.content }}></p>
+            <div className="container mt-5">
+              <div className="row gy-5">
+                {cards.map((card) => (
+                  <>
+                    <div className="col-lg-4">
+                      <div className="card mw-100 w-100 shadow rounded-3 h-100" key={card.id}>
+                        <div className="card-image">
+                          <img src={card.image} alt={card.title} />
+                        </div>
+                        <h2 className="card-title">{card.title}</h2>
+                        <p
+                          className="card-content"
+                          dangerouslySetInnerHTML={{ __html: card.content }}
+                        ></p>
+                      </div>
+                    </div>
+                  </>
+                ))}
+                <div className="card-buttons flex-column flex-lg-row justify-content-center my-5">
+                  <button className="button button-create">
+                    Create Signature
+                  </button>
+                  <button className="button button-learn">
+                    Learn About Pricing
+                  </button>
                 </div>
-              ))}
-              <div className="card-buttons">
-                <button className="button button-create">Create Signature</button>
-                <button className="button button-learn">Learn About Pricing</button>
               </div>
             </div>
           </div>

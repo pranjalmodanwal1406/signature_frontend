@@ -52,7 +52,7 @@
         }
 
         .left {
-            padding: 0% 14%;
+            // padding: 0% 14%;
             h3 {
                 font-size: 1.5rem;
                 margin-bottom: 1rem;
@@ -169,6 +169,14 @@
                 font-size: 3rem;
             }
         }
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+        }.left {
+            padding:0 !important;
+       }
+       
     }
 
     @media (max-width: 1024px) {

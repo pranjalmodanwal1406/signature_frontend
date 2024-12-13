@@ -1,10 +1,10 @@
 import React from "react";
 import "./Industry.scss";
-import Industry01 from './images/page11.png';
-import Industry1 from './images/Industry_1.png';
-import Industry2 from './images/Industry_2.png';
-import Industry3 from './images/Industry_3.png';
-import Industry4 from './images/Industry_4.png';
+import Industry01 from "./images/page11.png";
+import Industry1 from "./images/Industry_1.png";
+import Industry2 from "./images/Industry_2.png";
+import Industry3 from "./images/Industry_3.png";
+import Industry4 from "./images/Industry_4.png";
 import Footer from "../Footer/Footer";
 
 function Industry() {
@@ -54,80 +54,82 @@ function Industry() {
         </div>
 
         {/* Section 2 */}
-        <div className="AlternatingSections">
-          <div className="section">
-            <div className="section__image_industry section__image--left">
-              <img src={Industry1} alt="Industry 1" />
+        <div className="container">
+          <div className="AlternatingSections">
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+              <div className="col-lg-6 order-2 order-lg-1">
+                <img src={Industry1} alt="Industry 1" className="w-100" />
+              </div>
+              <div className="col-lg-6 order-1 order-lg-2">
+                <h2>Education</h2>
+                <p>
+                  Content for the first section. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+                <button className="Industry_button">Get Started</button>
+              </div>
+             
             </div>
-            <div className="section__content section__content--right">
-              <h2>Education</h2>
-              <p>
-                Content for the first section. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-              <button className="Industry_button">Get Started</button>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6  ">
+                <h2>SaaS</h2>
+                <p>
+                  Content for the second section. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+                <button className="Industry_button">Get Started</button>
+              </div>
+              <div className="col-lg-6 ">
+                <img src={Industry2} alt="Industry 2" className="w-100" />
+              </div>
+            
             </div>
-          </div>
-
-          <div className="section">
-            <div className="section__content section__content--left">
-              <h2>SaaS</h2>
-              <p>
-                Content for the second section. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-              <button className="Industry_button">Get Started</button>
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6 order-2 order-lg-1">
+                <img src={Industry3} alt="Industry 3" className="w-100" />
+              </div>
+              <div className="col-lg-6 order-1 order-lg-2">
+                <h2>IT & Infra</h2>
+                <p>
+                  Content for the third section. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+                <button className="Industry_button">Get Started</button>
+              </div>
+             
             </div>
-            <div className="section__image_industry section__image--right">
-              <img src={Industry2} alt="Industry 2" />
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="section__image_industry section__image--left">
-              <img src={Industry3} alt="Industry 3" />
-            </div>
-            <div className="section__content section__content--right">
-              <h2>IT & Infra</h2>
-              <p>
-                Content for the third section. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-              <button className="Industry_button">Get Started</button>
-            </div>
-          </div>
-
-          <div className="section">
-            <div className="section__content section__content--left">
-              <h2>Creative Field</h2>
-              <p>
-                Content for the fourth section. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </p>
-              <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-              </ul>
-              <button className="Industry_button">Get Started</button>
-            </div>
-            <div className="section__image_industry section__image--right">
-              <img src={Industry4} alt="Industry 4" />
+            <div className="row gy-4 align-items-center mb-3 mb-lg-0">
+            <div className="col-lg-6">
+                <h2>Creative Field</h2>
+                <p>
+                  Content for the fourth section. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+                <ul>
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                  <li>Item 3</li>
+                </ul>
+                <button className="Industry_button">Get Started</button>
+              </div>
+              <div className="col-lg-6">
+                <img src={Industry4} alt="Industry 4" className="w-100" />
+              </div>
             </div>
           </div>
         </div>
