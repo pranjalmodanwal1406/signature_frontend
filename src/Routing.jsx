@@ -25,6 +25,7 @@ import Landing_page from "./component/Landing_page/Landing_page";
 import BlogDetail from "./component/Blog/blogDetail";
 import ScrollToTop from "./component/ScrollTop";
 import Listing_updates from "./component/Product_updates/listing_product";
+import Email_signature from "./component/Product_updates/email-signature";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/Blog" element={<Blog />} />
 
         <Route path="/Product_updates" element={<Product_updates />} />
+        <Route path="/email_updates" element={<Email_signature />} />
         <Route path="/Listing_updates" element={<Listing_updates />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legal" element={<Legal />} />

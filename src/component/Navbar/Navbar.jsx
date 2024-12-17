@@ -48,16 +48,13 @@ const Header = () => {
                       <h3>By Platform</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Gmail Signature</Link>
+                          <Link to="/email_updates">Gmail Signature</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Google Workspace</Link>
+                          <Link to="/email_updates">Google Workspace</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Outlook Signature</Link>
-                        </li>
-                        <li>
-                          <Link to="/Product_updates">Exchange Signature</Link>
+                          <Link to="/email_updates">Outlook Signature</Link>
                         </li>
                       </ul>
                     </div>
@@ -205,14 +202,10 @@ const Header = () => {
                       <h3>Blogs</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Blog">
-                            Email Marketing Updates
-                          </Link>
+                          <Link to="/Blog">Email Marketing Updates</Link>
                         </li>
                         <li>
-                          <Link to="/Blog">
-                            Digital Marketing Updates
-                          </Link>
+                          <Link to="/Blog">Digital Marketing Updates</Link>
                         </li>
                         <li>
                           <Link to="/Blog">Tech & IT</Link>
@@ -274,7 +267,6 @@ const Header = () => {
                   </div>
                 </div>
               </Nav.Link>
-             
             </Nav>
             <Nav>
               <div className={`navbar-right ${isMenuOpen ? "open" : ""}`}>
@@ -302,16 +294,13 @@ const Header = () => {
                   <span>By Platform</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Gmail Signature</Link>
+                      <Link to="/email_updates">Gmail Signature</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Google Workspace</Link>
+                      <Link to="/email_updates">Google Workspace</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Outlook Signature</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">Exchange Signature</Link>
+                      <Link to="/email_updates">Outlook Signature</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
@@ -476,7 +465,7 @@ const Header = () => {
                   </ul>
                 </NavDropdown.Item>
               </NavDropdown>
-             
+
               <div className="navbar-right d-flex">
                 <Link to="/signup" className="btn signup-button w-100">
                   Sign Up

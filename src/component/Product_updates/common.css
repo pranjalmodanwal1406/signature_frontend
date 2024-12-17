@@ -1,0 +1,14 @@
+.section-wrapper a strong {
+  color: black;
+
+  font-size: 30px;
+}
+.section-wrapper a{
+    text-decoration: none;
+}
+.section-wrapper h2{
+    font-weight: 700 !important;
+}
+.section-wrapper ol li{
+   margin: 10px 0;
+}
