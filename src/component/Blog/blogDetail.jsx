@@ -66,7 +66,7 @@ export default function BlogDetail() {
   if (!data) {
     return (
       <div className="container">
-        <div className="blog my-5">
+        <div className="blog h-100vh">
           <section className="py-5">
             <div className="container-fluid">
               <div className="d-flex justify-content-center align-items-center">
