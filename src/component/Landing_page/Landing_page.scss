@@ -678,6 +678,12 @@ h3{
   // Media Queries for different screen sizes
 
   @media (max-width: 1200px) {
+    .reviews .swiper-button-prev {
+      left: 16px;
+  }
+  .reviews .swiper-button-next {
+    right: 16px;
+}
     .landingpage4 {
       padding-left: 0;
     }

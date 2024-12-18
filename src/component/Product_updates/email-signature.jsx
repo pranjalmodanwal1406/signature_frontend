@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./common.css";
 import data from "../../data.json";
-import { useLocation } from "react-router-dom";
+import { useLocation , Link } from "react-router-dom";
 
 export default function Email_signature() {
   const location = useLocation();
@@ -27,7 +27,7 @@ export default function Email_signature() {
           <div>
             <div className="container-fluid">
               <div className="Product_updates_p pt-5">
-                <span className="text-dark ">Home /</span>{" "}
+                <Link className="text-dark text-decoration-none" to="/">Home /</Link>{" "}
                 <span className="text-primary">{allData?.title}</span>
               </div>
               <div className="row gy-4 align-items-center">
