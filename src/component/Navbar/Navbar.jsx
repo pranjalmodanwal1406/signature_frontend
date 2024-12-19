@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import signature_logo from "./logo/signature_logo.png";
 import Container from "react-bootstrap/Container";
@@ -7,10 +7,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import axios from "axios";
 
 const Header = () => {
   const [activeTab, setActiveTab] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [blogData, setBlogData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleTabClick = (tabName) => {
     setActiveTab(activeTab === tabName ? "" : tabName);
@@ -22,6 +25,36 @@ const Header = () => {
 
   const tabs = ["Features", "Create", "Resources", "Company"];
 
+  useEffect(() => {
+    // Fetch the blog data from the API
+    axios
+      .get("http://44.196.64.110:9006/api/blog/getBlog")
+      .then((response) => {
+        // Access the 'data' field from the response and check if it's an array
+        const blogData = response.data?.data; // response.data is the object that contains the 'data' array
+        if (Array.isArray(blogData)) {
+          setBlogData(blogData); // Set the blog data if it's an array
+        } else {
+          console.error("Invalid data format received:", response.data); // Log an error if the data format is invalid
+        }
+        setLoading(false); // Set loading to false once data is fetched
+      })
+      .catch((error) => {
+        console.error("Error fetching blog data:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setShowOffcanvas(false); // Close Offcanvas on navigation
+    };
+
+    handleRouteChange(); // Trigger the effect on route change
+  }, [location]);
+
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
   const handleOffcanvasToggle = () => setShowOffcanvas(!showOffcanvas);
@@ -31,7 +64,7 @@ const Header = () => {
     <>
       <Navbar collapseOnSelect expand="lg" className="" sticky="top">
         <Container fluid>
-          <Navbar.Brand href="#home" className="navbar-logo">
+          <Navbar.Brand className="navbar-logo">
             <Link to="/Landing_page">
               {" "}
               <img src={signature_logo} alt="Signature Logo" />
@@ -40,7 +73,7 @@ const Header = () => {
           <Navbar.Toggle onClick={handleOffcanvasToggle} />
           <Navbar id="responsive-navbar-nav" className="d-none d-lg-flex w-100">
             <Nav className="me-auto border-0 dropdown gap-1">
-              <Nav.Link href="#features" className="hover-effect">
+              <Nav.Link className="hover-effect">
                 <span>Solution</span>
                 <div className="hoverer">
                   <div className="row gy-4">
@@ -48,16 +81,13 @@ const Header = () => {
                       <h3>By Platform</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Gmail Signature</Link>
+                          <Link to="/Gmail Signature">Gmail Signature</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Google Workspace</Link>
+                          <Link to="/Google Workspace">Google Workspace</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Outlook Signature</Link>
-                        </li>
-                        <li>
-                          <Link to="/Product_updates">Exchange Signature</Link>
+                          <Link to="/Outlook Signature">Outlook Signature</Link>
                         </li>
                       </ul>
                     </div>
@@ -91,7 +121,7 @@ const Header = () => {
                   </div>
                 </div>
               </Nav.Link>
-              <Nav.Link href="#features" className="hover-effect">
+              <Nav.Link className="hover-effect">
                 <span>Create</span>
                 <div className="hoverer">
                   <div className="row gy-4">
@@ -181,7 +211,7 @@ const Header = () => {
                   </div>
                 </div>
               </Nav.Link>
-              <Nav.Link href="#features" className="hover-effect">
+              <Nav.Link className="hover-effect">
                 <span>Resources</span>
                 <div className="hoverer">
                   <div className="row gy-4">
@@ -189,40 +219,33 @@ const Header = () => {
                       <h3>Guide</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">
+                          <Link to="/guide/How to add signature in outlook">
                             How to add signature in outlook
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Add Signature</Link>
-                        </li>
-                        <li>
-                          <Link to="/Product_updates">See All Guides</Link>
+                          <Link to="/guide/How to add a signature in Gmail ">
+                            How to add a signature in Gmail{" "}
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-4">
-                      <h3>Blogs</h3>
+                      <h3>
+                        <Link to={`/blog`}>Blogs</Link>
+                      </h3>
                       <ul className="list-unstyled ">
-                        <li>
-                          <Link to="/Blog">
-                            Email Marketing Updates
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Blog">
-                            Digital Marketing Updates
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Blog">Tech & IT</Link>
-                        </li>
+                        {blogData.map((blog) => (
+                          <li key={blog._id}>
+                            <Link to={`/blog/${blog._id}`}>{blog.title}</Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
                 </div>
               </Nav.Link>
-              <Nav.Link href="#features" className="hover-effect">
+              <Nav.Link className="hover-effect">
                 <span>Company</span>
                 <div className="hoverer">
                   <div className="row gy-4">
@@ -230,13 +253,10 @@ const Header = () => {
                       <h3>Support</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Product Updates</Link>
+                          <Link to="/company/Our Feature">Our Feature</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Our Feature</Link>
-                        </li>
-                        <li>
-                          <Link to="/Product_updates">Help Center</Link>
+                          <Link to="/company/Help Center">Help Center</Link>
                         </li>
                       </ul>
                     </div>
@@ -252,29 +272,29 @@ const Header = () => {
                         <li>
                           <Link to="/feedback">Feedback</Link>
                         </li>
-                        <li>
-                          <Link to="/Product_updates">Career</Link>
-                        </li>
                       </ul>
                     </div>
                     <div className="col-lg-4">
                       <h3>Legal</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">Terms of Service</Link>
+                          <Link to="/company/Terms of service">
+                            Terms of Service
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Privacy Policy</Link>
+                          <Link to="/company/Privacy Policy">
+                            Privacy Policy
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Trust Center</Link>
+                          <Link to="/company/Trust Center">Trust Center</Link>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </Nav.Link>
-             
             </Nav>
             <Nav>
               <div className={`navbar-right ${isMenuOpen ? "open" : ""}`}>
@@ -298,24 +318,21 @@ const Header = () => {
           <Offcanvas.Body>
             <Nav className="flex-column">
               <NavDropdown title="Solution" id="offcanvas-solution-dropdown">
-                <NavDropdown.Item href="#platform" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>By Platform</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Gmail Signature</Link>
+                      <Link to="/Gmail Signature">Gmail Signature</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Google Workspace</Link>
+                      <Link to="/Google Workspace">Google Workspace</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Outlook Signature</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">Exchange Signature</Link>
+                      <Link to="/Outlook Signature">Outlook Signature</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#industry" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>By Industry</span>
                   <ul className="list-unstyled ">
                     <li>
@@ -329,7 +346,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#industry" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>By Profession</span>
                   <ul className="list-unstyled ">
                     <li>
@@ -342,7 +359,7 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Create" id="offcanvas-create-dropdown">
-                <NavDropdown.Item href="#templates" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>Templates</span>
 
                   <ul className="list-unstyled ">
@@ -370,7 +387,7 @@ const Header = () => {
                     </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#tools" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>Tools</span>
                   <ul className="list-unstyled ">
                     <li>
@@ -396,55 +413,47 @@ const Header = () => {
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Resources" id="offcanvas-resources-dropdown">
-                <NavDropdown.Item href="#guides" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>Guides</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">
+                      <Link to="/guide/How to add signature in outlook">
                         How to add signature in outlook
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Add Signature</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">See All Guides</Link>
+                      <Link to="/guide/How to add a signature in Gmail ">
+                        How to add a signature in Gmail{" "}
+                      </Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#blogs" className="hover-effect">
-                  <span>Blogs</span>{" "}
+                <NavDropdown.Item className="hover-effect">
+                  <span>
+                    <Link to={`/blog`}>Blogs</Link>
+                  </span>
                   <ul className="list-unstyled ">
-                    <li>
-                      <Link to="/Product_updates">Email Marketing Updates</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">
-                        Digital Marketing Updates
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">Tech & IT</Link>
-                    </li>
+                    {blogData.map((blog) => (
+                      <li key={blog._id}>
+                        <Link to={`/blog/${blog._id}`}>{blog.title}</Link>
+                      </li>
+                    ))}
                   </ul>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Company" id="offcanvas-resources-dropdown">
-                <NavDropdown.Item href="#company" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>Support</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Product Updates</Link>
+                      <Link to="/company/Our Feature">Our Feature</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Our Feature</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">Help Center</Link>
+                      <Link to="/company/Help Center">Help Center</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#about" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>About us</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
@@ -456,27 +465,26 @@ const Header = () => {
                     <li>
                       <Link to="/feedback">Feedback</Link>
                     </li>
-                    <li>
-                      <Link to="/Product_updates">Career</Link>
-                    </li>
                   </ul>
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#legal" className="hover-effect">
+                <NavDropdown.Item className="hover-effect">
                   <span>Legal</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Terms of Service</Link>
+                      <Link to="/company/Terms of service">
+                        Terms of Service
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Privacy Policy</Link>
+                      <Link to="/company/Privacy Policy">Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Trust Center</Link>
+                      <Link to="/company/Trust Center">Trust Center</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
               </NavDropdown>
-             
+
               <div className="navbar-right d-flex">
                 <Link to="/signup" className="btn signup-button w-100">
                   Sign Up

@@ -26,7 +26,7 @@
       z-index: 2;
       width: 100%;
       text-align: center;
-      margin-top: 5%;
+      margin-top: 15%;
       top: 0%;
       width: 100%;
 
@@ -147,6 +147,11 @@
 }
 
 @media (max-width: 1024px) {
+    .left .Product_updates_content {
+       
+        margin-top: 7%;
+       
+    }
   .Product_updates_content {
       .Product_updates_para1 {
           font-size: 1.3rem   !important;
@@ -218,6 +223,7 @@
       }
       .Product_updates_para2 {
           font-size: 0.6rem  !important;
+          width: 100% !important;
       }
       .Product_updates_para3 {
           font-size: 0.3rem  !important;

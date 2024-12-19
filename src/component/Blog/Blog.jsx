@@ -43,23 +43,7 @@ const Blog = () => {
         setLoading(false);
       });
   }, []);
-  useEffect(() => {
-    axios
-      .get("http://44.196.64.110:9006/api/blog/getBlog")
-      .then((response) => {
-        const blogData = response?.data?.data;
-        if (Array.isArray(blogData)) {
-          setBlogData(blogData); // Set the blog data if it's an array
-        } else {
-          console.error("Invalid data format received:", response.data); // Log an error if the data format is invalid
-        }
-        setLoading(false); // Set loading to false once data is fetched
-      })
-      .catch((error) => {
-        console.error("Error fetching blog data:", error); // Log any fetch errors
-        setLoading(false); // Set loading to false in case of an error
-      });
-  }, []);
+
 
   const handleLoadMore = () => {
     setVisiblePosts(visiblePosts + 9); // Load 9 more posts

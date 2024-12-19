@@ -1,4 +1,11 @@
 /* Base Styles */
+
+.social-icons span {
+    display: none!important;
+}
+.social-icons div[role="button"] {
+   border: 0;
+  }
 .Sign_In {
     display: flex;
     height: 100vh;

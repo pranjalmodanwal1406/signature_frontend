@@ -66,7 +66,7 @@ export default function BlogDetail() {
   if (!data) {
     return (
       <div className="container">
-        <div className="blog my-5">
+        <div className="blog h-100vh">
           <section className="py-5">
             <div className="container-fluid">
               <div className="d-flex justify-content-center align-items-center">
@@ -89,6 +89,12 @@ export default function BlogDetail() {
           <div className="container-fluid">
             <div className="" key={data?._id}>
               <Breadcrumb className="bg-none">
+                <Breadcrumb.Item className="text-decoration-none text-dark">
+                  <Link className="text-dark text-decoration-none" to="/">
+                    Home
+                  </Link>{" "}
+                </Breadcrumb.Item>
+
                 <Breadcrumb.Item active>{data?.title}</Breadcrumb.Item>
               </Breadcrumb>
               <h1 className="text-start fs-3 mb-3">{data?.title}</h1>
