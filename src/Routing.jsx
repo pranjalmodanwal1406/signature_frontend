@@ -50,7 +50,7 @@ function App() {
         <Route path="/:title" element={<Email_signature />} />
         <Route path="/company/:title" element={<LegalPages />} />
         <Route path="/guide/:title" element={<GuidePage />} />
-        <Route path="/Listing_updates" element={<Listing_updates />} />
+        <Route path="/create/:title" element={<Listing_updates />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Legal" element={<Legal />} />
 
