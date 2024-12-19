@@ -95,15 +95,15 @@ const Header = () => {
                       <h3>By Industry</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">
+                          <Link to="/Industry">
                             Education Facilities
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Real Estate Agent</Link>
+                          <Link to="/Industry">Real Estate Agent</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Saas Companies</Link>
+                          <Link to="/Industry">Saas Companies</Link>
                         </li>
                       </ul>
                     </div>
@@ -111,10 +111,10 @@ const Header = () => {
                       <h3>By Profession</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">CEO & Excecutives</Link>
+                          <Link to="/Profession">CEO & Excecutives</Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Doctors</Link>
+                          <Link to="/Profession">Doctors</Link>
                         </li>
                       </ul>
                     </div>
@@ -129,30 +129,17 @@ const Header = () => {
                       <h3>Get inspired</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Listing_updates">
-                            Email Signature examples
+                          <Link to="/create/Email Sign Off">
+                            Email Sign Off
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Listing_updates">
-                            Email Signature Templates
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">
-                            Email Signature Design
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">Email Sign Off</Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">
+                          <Link to="/create/Email Signature Banner">
                             Email Signature Banner
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Listing_updates">
+                          <Link to="/create/Handwriteen Signatures">
                             Handwriteen Signatures
                           </Link>
                         </li>
@@ -162,48 +149,18 @@ const Header = () => {
                       <h3>Templates</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Listing_updates">Disclaimer Template</Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">
-                            Cool Signature Templates
+                          <Link to="/create/Email Signature examples">
+                            Email Signature examples
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Listing_updates">
-                            Minimalist Templates
+                          <Link to="/create/Email Signature Templates">
+                            Email Signature Templates
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Listing_updates">Animated Templates</Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">Banner Templates</Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-4">
-                      <h3>Tools</h3>
-                      <ul className="list-unstyled ">
-                        <li>
-                          <Link to="/Listing_updates">
-                            Email Signature generator
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">
-                            Email Signature manager
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">Signature generator</Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">Banner Maker</Link>
-                        </li>
-                        <li>
-                          <Link to="/Listing_updates">
-                            Email discliamer generator
+                          <Link to="/create/Email Signature Design">
+                            Email Signature Design
                           </Link>
                         </li>
                       </ul>
@@ -336,13 +293,13 @@ const Header = () => {
                   <span>By Industry</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">Education Facilities</Link>
+                      <Link to="/Industry">Education Facilities</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Real Estate Agent</Link>
+                      <Link to="/Industry">Real Estate Agent</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Saas Companies</Link>
+                      <Link to="/Industry">Saas Companies</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
@@ -350,63 +307,51 @@ const Header = () => {
                   <span>By Profession</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">CEO & Excecutives</Link>
+                      <Link to="/Profession">CEO & Excecutives</Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Doctors</Link>
+                      <Link to="/Profession">Doctors</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Create" id="offcanvas-create-dropdown">
                 <NavDropdown.Item className="hover-effect">
-                  <span>Templates</span>
+                  <span>Get Inspired</span>
 
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Listing_updates">
-                        Email Signature examples
+                      <Link to="/create/Email Sign Off">Email Sign Off</Link>
+                    </li>
+                    <li>
+                      <Link to="/create/Email Signature Banner">
+                        Email Signature Banner
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Listing_updates">
-                        Email Signature Templates
+                      <Link to="/create/Handwriteen Signatures">
+                        Handwriteen Signatures
                       </Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">Email Signature Design</Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">Email Sign Off</Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">Email Signature Banner</Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">Handwriteen Signatures</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="hover-effect">
-                  <span>Tools</span>
+                  <span>Templates</span>
+
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Listing_updates">
-                        Email Signature generator
+                      <Link to="/create/Email Signature examples">
+                        Email Signature examples
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Listing_updates">Email Signature manager</Link>
+                      <Link to="/create/Email Signature Templates">
+                        Email Signature Templates
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/Listing_updates">Signature generator</Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">Banner Maker</Link>
-                    </li>
-                    <li>
-                      <Link to="/Listing_updates">
-                        Email discliamer generator
+                      <Link to="/create/Email Signature Design">
+                        Email Signature Design
                       </Link>
                     </li>
                   </ul>
