@@ -2,11 +2,151 @@ import React, { useEffect, useState } from "react";
 import "./Product_updates.scss";
 import Footer from "../Footer/Footer";
 import image1 from "./images/Product_updates.png";
-import template from "./template.json";
+// import template from "./template.json";
 import { useLocation } from "react-router-dom";
+import template1 from "./template/template-v1.png";
+import template2 from "./template/template-v2.png";
+import template3 from "./template/template-v3.png";
+import template4 from "./template/template-v4.png";
 function Listing_updates() {
   const location = useLocation();
   const [allData, setAllData] = useState(null);
+
+ const template =  [
+    {
+      "title": "Email Signature examples",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": `${template1}`,
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": `${template2}`,
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": `${template2}`,
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": `${template4}`,
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    },
+    {
+      "title": "Email Signature Templates",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": "/src/component/Product_updates/template/template-v5.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v6.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v7.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v8.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    },
+    {
+      "title": "Email Signature Design",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": "/src/component/Product_updates/template/template-v9.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v10.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v11.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v12.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    },
+    {
+      "title": "Email Sign Off",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": "/src/component/Product_updates/template/template-v13.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v14.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v15.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v16.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    },
+    {
+      "title": "Email Signature Banner",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": "/src/component/Product_updates/template/template-v17.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v18.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v19.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v20.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    },
+    {
+      "title": "Handwriteen Signatures",
+      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      "image": [
+        {
+          "url": "/src/component/Product_updates/template/template-v21.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v22.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v23.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        },
+        {
+          "url": "/src/component/Product_updates/template/template-v24.png",
+          "caption": "Just sign in with your Gmail and… you’re done"
+        }
+      ]
+    }
+  ]
+  
 
   const handleData = (path) => {
     const decodedPath = decodeURIComponent(path).replace("/", "");
