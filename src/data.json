@@ -44,6 +44,36 @@
         "heading": "Create a professional signature in Gmail",
         "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
         "mainImage": "https://www.wisestamp.com/wp-content/uploads/2020/07/Generate-an-HTML-signature-in-Gmail.jpg"
+      },
+      {
+        "heading": "How to ace your Gmail signature design and style and make the right impression",
+        "description": "While a professional Gmail signature will work in your favor, a poorly designed signature can work against you. Follow these 5 essential tips to ensure your signature’s success.",
+        "steps": [
+          {
+            "heading": "Get inspired: ",
+            "description": "We recommend starting your Gmail signature creation process by looking at some cool email signature examples that actual people use to positively stand out.At Wisestamp we see millions of signatures every year, made spontaneously by our users. If we remember these examples it’s because they work. We made these memorable examples into templates you can use as your own. Give them a look-see"
+          },
+          {
+            "heading": "Stand out visually:",
+            "description": "To get people’s attention your Gmail signature block has to have either a splash of color or some movement to it. Many beautiful email signature designs use color, without being too colorful and appearing clownish. Our email signature tips page for graphic designers goes into how to do this in-depth."
+          },
+          {
+            "heading": " Stand out with a personal touch:",
+            "description": "Adding something from yourself can grant you big wins. It can influence people into seeing you as more honest, more authentic, and more approachable. But this can also go very wrong if you send the wrong message to the wrong people. So, think about who you’re talking to and what about you will make them trust you rather than brush you off.",
+            "pointImg": "https://www.wisestamp.com/wp-content/uploads/2020/12/Modern-CFO-manager-email-signature-example.jpg"
+          },
+          {
+            "heading": " Set your signature a defined goal: ",
+            "description": "Before you run ahead and put the finishing touches on your signature, think a moment about what you want your signature to achieve. This will definitely affect what you decide to add to or remove from your final signature. ",
+            "pointImg": "https://www.wisestamp.com/wp-content/uploads/2020/12/professional-gmail-signautre-template-for-business-with-recruiting-CTA-and-GIF-sign-off.gif"
+          },
+          {
+            "heading": "Set the stage for later engagement ",
+            "description": "Your Gmail email signature is the end of your email, but it doesn’t have to be the end of your recipients’ engagement with you. Even if you added a CTA as I advised in the previous tip you may still miss out. It’s fair to say that most people will not be primed to take you up on your offer, because the commitment may be too high for them at that point. "
+          }
+        ],
+        "mainImage": "https://www.wisestamp.com/wp-content/uploads/2020/07/Generate-an-HTML-signature-in-Gmail.jpg",
+        "imagedesc": "image description"
       }
     ]
   },

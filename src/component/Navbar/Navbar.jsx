@@ -219,15 +219,14 @@ const Header = () => {
                       <h3>Guide</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/Product_updates">
+                          <Link to="/guide/How to add signature in outlook">
                             How to add signature in outlook
                           </Link>
                         </li>
                         <li>
-                          <Link to="/Product_updates">Add Signature</Link>
-                        </li>
-                        <li>
-                          <Link to="/Product_updates">See All Guides</Link>
+                          <Link to="/guide/How to add a signature in Gmail ">
+                            How to add a signature in Gmail{" "}
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -254,13 +253,10 @@ const Header = () => {
                       <h3>Support</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/company/3">Product Updates</Link>
+                          <Link to="/company/Our Feature">Our Feature</Link>
                         </li>
                         <li>
-                          <Link to="/company/3">Our Feature</Link>
-                        </li>
-                        <li>
-                          <Link to="/company/3">Help Center</Link>
+                          <Link to="/company/Help Center">Help Center</Link>
                         </li>
                       </ul>
                     </div>
@@ -276,22 +272,23 @@ const Header = () => {
                         <li>
                           <Link to="/feedback">Feedback</Link>
                         </li>
-                        <li>
-                          <Link to="/company/3">Career</Link>
-                        </li>
                       </ul>
                     </div>
                     <div className="col-lg-4">
                       <h3>Legal</h3>
                       <ul className="list-unstyled ">
                         <li>
-                          <Link to="/company/1">Terms of Service</Link>
+                          <Link to="/company/Terms of service">
+                            Terms of Service
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/company/2">Privacy Policy</Link>
+                          <Link to="/company/Privacy Policy">
+                            Privacy Policy
+                          </Link>
                         </li>
                         <li>
-                          <Link to="/company/3">Trust Center</Link>
+                          <Link to="/company/Trust Center">Trust Center</Link>
                         </li>
                       </ul>
                     </div>
@@ -420,15 +417,14 @@ const Header = () => {
                   <span>Guides</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/Product_updates">
+                      <Link to="/guide/How to add signature in outlook">
                         How to add signature in outlook
                       </Link>
                     </li>
                     <li>
-                      <Link to="/Product_updates">Add Signature</Link>
-                    </li>
-                    <li>
-                      <Link to="/Product_updates">See All Guides</Link>
+                      <Link to="/guide/How to add a signature in Gmail ">
+                        How to add a signature in Gmail{" "}
+                      </Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
@@ -450,13 +446,10 @@ const Header = () => {
                   <span>Support</span>{" "}
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/company/3">Product Updates</Link>
+                      <Link to="/company/Our Feature">Our Feature</Link>
                     </li>
                     <li>
-                      <Link to="/company/3">Our Feature</Link>
-                    </li>
-                    <li>
-                      <Link to="/company/3">Help Center</Link>
+                      <Link to="/company/Help Center">Help Center</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>
@@ -472,22 +465,21 @@ const Header = () => {
                     <li>
                       <Link to="/feedback">Feedback</Link>
                     </li>
-                    <li>
-                      <Link to="/company/3">Career</Link>
-                    </li>
                   </ul>
                 </NavDropdown.Item>
                 <NavDropdown.Item className="hover-effect">
                   <span>Legal</span>
                   <ul className="list-unstyled ">
                     <li>
-                      <Link to="/company/1">Terms of Service</Link>
+                      <Link to="/company/Terms of service">
+                        Terms of Service
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/company/2">Privacy Policy</Link>
+                      <Link to="/company/Privacy Policy">Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link to="/company/3">Trust Center</Link>
+                      <Link to="/company/Trust Center">Trust Center</Link>
                     </li>
                   </ul>
                 </NavDropdown.Item>

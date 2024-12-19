@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./common.css";
 import data from "../../data.json";
-import { useLocation , Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 export default function Email_signature() {
   const location = useLocation();
-  const [allData, setAllData] = useState(null);
+  const [allData, setAllData] = useState();
 
   const handleData = (path) => {
     const decodedPath = decodeURIComponent(path).replace("/", ""); // Decode and remove leading slash
@@ -26,11 +27,8 @@ export default function Email_signature() {
         {allData ? (
           <div>
             <div className="container-fluid">
-              <div className="Product_updates_p pt-5">
-                <Link className="text-dark text-decoration-none" to="/">Home /</Link>{" "}
-                <span className="text-primary">{allData?.title}</span>
-              </div>
-              <div className="row gy-4 align-items-center">
+             
+              <div className="row gy-4 align-items-center my-lg-5 my-3">
                 <div className="col-lg-7 pt-5">
                   <h1>{allData?.heading}</h1>
                   <p className="pt-4">{allData?.description}</p>
@@ -66,6 +64,18 @@ export default function Email_signature() {
 
                               <br />
                               <span> {item?.description || ""}</span>
+                              <span>
+                                {" "}
+                                {item?.pointImg ? (
+                                  <img
+                                    src={item?.pointImg}
+                                    alt="image"
+                                    className="w-100 py-5 my-4 shadow ps-4 rounded-5"
+                                  />
+                                ) : (
+                                  ""
+                                )}
+                              </span>
                             </li>
                           ))}
                         </ol>
@@ -93,6 +103,8 @@ export default function Email_signature() {
         ) : (
           <div>No data found for the specified title.</div>
         )}
+
+        <Footer />
       </div>
     </>
   );
