@@ -8,145 +8,175 @@ import template1 from "./template/template-v1.png";
 import template2 from "./template/template-v2.png";
 import template3 from "./template/template-v3.png";
 import template4 from "./template/template-v4.png";
+import template5 from "./template/template-v5.png";
+import template6 from "./template/template-v6.png";
+import template7 from "./template/template-v7.png";
+import template8 from "./template/template-v8.png";
+import template9 from "./template/template-v9.png";
+import template10 from "./template/template-v10.png";
+import template11 from "./template/template-v11.png";
+import template12 from "./template/template-v12.png";
+import template13 from "./template/template-v13.png";
+import template14 from "./template/template-v14.png";
+import template15 from "./template/template-v15.png";
+import template16 from "./template/template-v16.png";
+import template17 from "./template/template-v17.png";
+import template18 from "./template/template-v18.png";
+import template19 from "./template/template-v19.png";
+import template20 from "./template/template-v20.png";
+import template21 from "./template/template-v21.png";
+
+import template22 from "./template/template-v22.png";
+import template23 from "./template/template-v23.png";
+
+import template24 from "./template/template-v24.png";
+
+import template25 from "./template/template-v25.png";
+
 function Listing_updates() {
   const location = useLocation();
   const [allData, setAllData] = useState(null);
 
- const template =  [
+  const template = [
     {
-      "title": "Email Signature examples",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Email Signature examples",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": `${template1}`,
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template1}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": `${template2}`,
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template2}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": `${template2}`,
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template3}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": `${template4}`,
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
+          url: `${template4}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
     },
     {
-      "title": "Email Signature Templates",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Email Signature Templates",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": "/src/component/Product_updates/template/template-v5.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template5}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v6.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template6}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v7.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template7}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v8.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
+          url: `${template8}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
     },
     {
-      "title": "Email Signature Design",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Email Signature Design",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": "/src/component/Product_updates/template/template-v9.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template9}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v10.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template10}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v11.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template11}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v12.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
+          url: `${template12}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
     },
     {
-      "title": "Email Sign Off",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Email Sign Off",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": "/src/component/Product_updates/template/template-v13.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template13}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v14.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template14}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v15.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template15}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v16.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
+          url: `${template16}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
     },
     {
-      "title": "Email Signature Banner",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Email Signature Banner",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": "/src/component/Product_updates/template/template-v17.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template17}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v18.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template18}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v19.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template19}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v20.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
+          url: `${template20}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
     },
     {
-      "title": "Handwriteen Signatures",
-      "description": "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
-      "image": [
+      title: "Handwriteen Signatures",
+      description:
+        "Get a beautiful Gmail email signature that makes an impression. Browse Gmail signature templates, learn tips, and easily generate your signature in 2 minutes.",
+      image: [
         {
-          "url": "/src/component/Product_updates/template/template-v21.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template21}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v22.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template22}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v23.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
+          url: `${template23}`,
+          caption: "Just sign in with your Gmail and… you’re done",
         },
         {
-          "url": "/src/component/Product_updates/template/template-v24.png",
-          "caption": "Just sign in with your Gmail and… you’re done"
-        }
-      ]
-    }
-  ]
-  
+          url: `${template24}`,
+          caption: "Just sign in with your Gmail and… you’re done",
+        },
+      ],
+    },
+  ];
 
   const handleData = (path) => {
     const decodedPath = decodeURIComponent(path).replace("/", "");
@@ -181,9 +211,7 @@ function Listing_updates() {
         <div className="row gy-4  pb-5 align-items-center">
           <div className="col-lg-7">
             <h1>{allData?.title}</h1>
-            <p className="pt-4">
-            {allData?.description}
-            </p>
+            <p className="pt-4">{allData?.description}</p>
             <div className="buttons d-flex gap-3 flex-row mt-4 mb-5">
               <button className="learnmore-button">Learn More</button>
               <button className="view_pricing">View Pricing</button>
@@ -209,7 +237,11 @@ function Listing_updates() {
                 <li key={index}>
                   <div className="card w-100 rounded-5">
                     <div className="card-body">
-                      <img src={item?.url} className="w-100" alt={item?.caption} />
+                      <img
+                        src={item?.url}
+                        className="w-100"
+                        alt={item?.caption}
+                      />
                     </div>
                   </div>
                 </li>
