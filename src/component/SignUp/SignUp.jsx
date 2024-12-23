@@ -58,7 +58,7 @@ function SignUp() {
 
       // Send the credential to the backend
       const res = await axios.post(
-        "http://localhost:9006/api/passport/google-login",
+        "http://44.196.64.110:9006/api/passport/google-login",
         {
           token: credential,
           withCredentials: true,
